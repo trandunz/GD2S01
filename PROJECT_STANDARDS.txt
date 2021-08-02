@@ -21,7 +21,7 @@ SCRIPTS
 
  - All Member Variables Must Start With "m_"
 
- 	|  e.g m_fMovementSpeed  |
+ 	|  e.g m_fMovementSpeed_W  |	<- Where "W" Stands For William
 
 -------
 FOLDERS
