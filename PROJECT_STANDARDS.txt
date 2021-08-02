@@ -1,0 +1,36 @@
+
+DO NOT UPDATE CHANGES FOR OTHER PEOPLES SCRIPTS AND OBJECTS, EVEN IF ITS A SMALL CHANGE, WITHOUT ASKING THEM!!!
+DO NOT MOVE SCRIPTS TO DIFFERENT FOLDER THAT ARE NOT YOURS. ALWAYS ASK FOR PERMISSION REGARDLESS OF HOW SMALL THE CHANGE!!
+
+-------
+OBJECTS
+-------
+ - When looking to test a new script or whatever it may be, Create a duplicate object that begins with your name (regardless of the object). 
+   This new object will be yours and yours only for any further tests. We do this to prevent merge issues!
+
+	|  e.g Will_PlayerTest  |
+	|  e.g Ben_PlayerTest   |
+	|  e.g Richard_Castle   |
+
+-------
+SCRIPTS
+-------
+ - All Script Names Must Start with "Script_" And End With "_FirstNameInitial".
+
+ 	|  e.g Script_CharacterMotor_W  |    <- Where "W" Stands For William
+
+ - All Member Variables Must Start With "m_"
+
+ 	|  e.g m_fMovementSpeed  |
+
+-------
+FOLDERS
+-------
+ - All Scripts, images, objects, scenes, e.t.c Must be inside a folder with the corresponding name.
+
+ - If We have many diffrent scripts for the same object, Create a sub-folder and place the scripts in there.
+
+	|  e.g Scripts->Player-> Script_CharacterMotor  |
+	|			 Script_MouseLook       |
+	|			 e.t.c			|
+
