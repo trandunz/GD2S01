@@ -26,7 +26,7 @@ SCRIPTS
 
 - All Public Member Variables Do Not Need "m_"
 
-	|  e.g fMovementSpeed  |	<- Where "W" Stands For William
+	|  e.g fMovementSpeed  |	
 
 -------
 FOLDERS

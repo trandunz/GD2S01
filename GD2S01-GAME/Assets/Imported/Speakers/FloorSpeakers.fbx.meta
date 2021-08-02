@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 6a62afc3b572a9d4782940f97b36f91e
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BoxMat
+    second: {fileID: 2100000, guid: b303470419922764588938a40d7f8e90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BoxRim
+    second: {fileID: 2100000, guid: 7ce06dd55deb2e945b3e79f3e2c6fe1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HornCenter
+    second: {fileID: 2100000, guid: bda408cd44456c044a605607f7260cec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HornRim
+    second: {fileID: 2100000, guid: cf207079146955e408c6b023d2101c3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeakerCenter
+    second: {fileID: 2100000, guid: ff7d057ad0e2f2b489b56688a41f91ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeakerRim
+    second: {fileID: 2100000, guid: 8cc50a6c4130d884cbb6eb0c21edb1fc, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxMat_BaseColor
+    second: {fileID: 2800000, guid: 03c9330c5ebd74e4a8942f8e47a1edd9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxMat_Metallic
+    second: {fileID: 2800000, guid: 66b146a71afe45348abe68f3a52f799b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxMat_Normal
+    second: {fileID: 2800000, guid: 3521938a3076aa84da7a864409610410, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxMat_Roughness
+    second: {fileID: 2800000, guid: 902664cafe9fd9e4fa9fcbf0640f2990, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxRim_BaseColor
+    second: {fileID: 2800000, guid: 8f8a92d8925f59e459ee5d84bbe1f18e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxRim_Metallic
+    second: {fileID: 2800000, guid: ac69191b66c62cb4d9522c2e8b8fbbf1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxRim_Normal
+    second: {fileID: 2800000, guid: 362cd6315278b9b4b9a7db9cd1c314d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BoxRim_Roughness
+    second: {fileID: 2800000, guid: 51681c26bdb410047a36cd397447fb50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornCenter_BaseColor
+    second: {fileID: 2800000, guid: c762e219c30304747a891cac8bbd8484, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornCenter_Metallic
+    second: {fileID: 2800000, guid: b36be7b4b3109424281c25888856fd24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornCenter_Normal
+    second: {fileID: 2800000, guid: d9a44d1ee7eb4aa40ba9569b29cd7889, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornCenter_Roughness
+    second: {fileID: 2800000, guid: 47cab78114d0cf5489391897faaef7a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornRim_BaseColor
+    second: {fileID: 2800000, guid: a1daa37d55e941946888078e3992a0b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornRim_Metallic
+    second: {fileID: 2800000, guid: 1b4d63cdbf4f203498bf27726e147fe7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornRim_Normal
+    second: {fileID: 2800000, guid: 4310bac7bd081b7429c35a2b07950e86, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: HornRim_Roughness
+    second: {fileID: 2800000, guid: 31161760a73011f4db23f88c5b431bda, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerCenter_BaseColor
+    second: {fileID: 2800000, guid: 94ff416d3c0a4124a89e05555cff4d75, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerCenter_Metallic
+    second: {fileID: 2800000, guid: 7ca8c83744790a5469c5ae00a349716a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerCenter_Normal
+    second: {fileID: 2800000, guid: f504c28d36c181b44bbd6c402b21b975, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerCenter_Roughness
+    second: {fileID: 2800000, guid: a195393c818751f4989c0545fc83757a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerRim_BaseColor
+    second: {fileID: 2800000, guid: 70544e965180c8144b6998676d8d0c1f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerRim_Metallic
+    second: {fileID: 2800000, guid: 66b3f8d096f96944c83a00c2eec39d9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerRim_Normal
+    second: {fileID: 2800000, guid: f681d468296a7b242a8e7d37bd8ac93b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerRim_Roughness
+    second: {fileID: 2800000, guid: db8f216540068144b8fd510a72201624, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
