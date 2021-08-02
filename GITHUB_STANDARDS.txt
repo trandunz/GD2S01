@@ -1,12 +1,12 @@
 I have made a branch for each person to work on. You will push all of your work into your personal branch.
-When your branch is stable and fully functional, only then will you Merge it into main.
+When your branch is stable and fully functional, only then will you Merge it into the staging branch.
 
 --------------------
-HOW TO MERGE TO MAIN
+HOW TO MERGE TO STAGING_BRANCH
 --------------------
-Current Branch -> Select Main.
-Current Branch -> Choose A Branch To Merge Into Main -> Select Your Branch -> Create A Merge Commit
-Your Files and changes will now be merged into Main.
+Current Branch -> Select STAGING_BRANCH.
+Current Branch -> Choose A Branch To Merge Into STAGING_BRANCH -> Select Your Branch -> Create A Merge Commit
+Your Files and changes will now be merged into STAGING_BRANCH.
 
 The Above Tutorial is for GitHubDesktop.
 Idk how to use source tree sorry. Im sure it will be similar to the above though.
@@ -34,7 +34,7 @@ COMMIT NAME LEGEND
 - All Commits Must Adhere to the following legend.
 
 " * " for Modified Files 
-	|  e.g *Script_CharacterMotor  |
+	|  e.g *Script_CharacterMotor_W  |
 
 " + " for Added Files
 	|  e.g  + Castle_W  |
