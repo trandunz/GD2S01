@@ -2704,6 +2704,7 @@ GameObject:
   - component: {fileID: 5947751810927621196}
   - component: {fileID: 5894245490649207818}
   - component: {fileID: 8562308620122771537}
+  - component: {fileID: 5080432448816032043}
   m_Layer: 0
   m_Name: Player_W
   m_TagString: Untagged
@@ -2804,6 +2805,19 @@ MonoBehaviour:
   m_FootstepLength: 0.5
   m_JumpFootstepTimer: 0
   m_JumpFootstepCooldown: 0.5
+--- !u!114 &5080432448816032043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437860633364292419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889ea9046335d6743acffa2159aecfe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 7159195842833923814}
 --- !u!1 &8618991933628359465
 GameObject:
   m_ObjectHideFlags: 0
