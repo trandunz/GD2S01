@@ -43,12 +43,14 @@ public class Script_CharacterMotor_W : MonoBehaviour
 
     private void SpawnFootstep()
     {
-        m_bRightFoot = !m_bRightFoot;
-        Vector3 footOffset = new Vector3(m_bRightFoot ? 1.0f : -1.0f, 0.0f, 0.0f) * 0.25f;
-        footOffset = Quaternion.Euler(0.0f, m_Look.m_fSpin, 0.0f) * footOffset;
+        if (m_FootstepSounds.Length > 0)
+        {
+            m_bRightFoot = !m_bRightFoot;
+            Vector3 footOffset = new Vector3(m_bRightFoot ? 1.0f : -1.0f, 0.0f, 0.0f) * 0.25f;
+            footOffset = Quaternion.Euler(0.0f, m_Look.m_fSpin, 0.0f) * footOffset;
 
-        Destroy(Instantiate(m_FootstepSounds[Random.Range(0, 1)], m_FeetPosition.position + footOffset, m_FeetPosition.rotation), 1.0f);
-
+            Destroy(Instantiate(m_FootstepSounds[Random.Range(0, 1)], m_FeetPosition.position + footOffset, m_FeetPosition.rotation), 1.0f);
+        }
     }
 
     void Update()
@@ -77,6 +79,86 @@ public class Script_CharacterMotor_W : MonoBehaviour
             m_MoveSpeed = m_fMaxMoveSpeed;
         }
 
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Idle");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
+            GetComponentInChildren<Animator>().SetTrigger("Walking");
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
+            GetComponentInChildren<Animator>().SetTrigger("Idle");
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Idle");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");*/
+            GetComponentInChildren<Animator>().SetTrigger("WalkBack");
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
+            GetComponentInChildren<Animator>().SetTrigger("Idle");
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Idle");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");*/
+            GetComponentInChildren<Animator>().SetTrigger("WalkLeft");
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
+            GetComponentInChildren<Animator>().SetTrigger("Idle");
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Idle");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");*/
+            GetComponentInChildren<Animator>().SetTrigger("WalkRight");
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
+            GetComponentInChildren<Animator>().SetTrigger("Idle");
+        }
+
         float z = 0.0f;
         float x = 0.0f;
 
@@ -94,6 +176,12 @@ public class Script_CharacterMotor_W : MonoBehaviour
             m_Velocity.y = m_JumpSpeed;
             m_GroundedTimer = 0.0f;
             m_bGrounded = false;
+            GetComponentInChildren<Animator>().ResetTrigger("Idle");
+            GetComponentInChildren<Animator>().ResetTrigger("Walking");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
+            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");
+            GetComponentInChildren<Animator>().SetTrigger("Jump");
         }
 
         Vector3 inputMoveXZ = new Vector3(x, 0.0f, z);
@@ -179,10 +267,12 @@ public class Script_CharacterMotor_W : MonoBehaviour
         if (m_Velocity.z > 0.01 || m_Velocity.z < -0.01 || m_Velocity.x > 0.01 || m_Velocity.x < -0.01)
         {
             m_bWalking = true;
+            
         }
         else
         {
             m_bWalking = false;
+            
         }
     }
 }
