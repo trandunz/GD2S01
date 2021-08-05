@@ -11,7 +11,7 @@ public class Room_Swap_J : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_iRoomCount += 1;
     }
 
     // Update is called once per frame
