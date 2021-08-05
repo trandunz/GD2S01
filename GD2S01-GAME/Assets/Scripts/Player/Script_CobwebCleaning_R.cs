@@ -5,18 +5,22 @@ using UnityEngine;
 public class Script_CobwebCleaning_R : MonoBehaviour
 {
     [SerializeField]
-    public Transform m_Camera;
+    private Transform m_Camera;
     [SerializeField]
     private int m_iLayerMaskIgnoreRay;
     [SerializeField]
     private GameObject m_CobwebDestroyParticle;
+    [SerializeField]
+    private Animator m_brushAnim;
 
     public float fInteractRange = 3;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_Camera = FindObjectOfType<Script_MouseLook_W>().transform;
         m_iLayerMaskIgnoreRay = LayerMask.GetMask("Ignore Raycast");
+        m_brushAnim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +28,7 @@ public class Script_CobwebCleaning_R : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            m_brushAnim.Play("BrushSweepAnim");
             RaycastHit hit;
             if (Physics.Raycast(m_Camera.position, m_Camera.forward, out hit, fInteractRange, ~m_iLayerMaskIgnoreRay))
             {
