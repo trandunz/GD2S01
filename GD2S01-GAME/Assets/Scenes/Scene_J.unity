@@ -399,7 +399,7 @@ PrefabInstance:
     - target: {fileID: 8044916982538856500, guid: 8fe3737d37007144896db82162ff5f23,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8044916982538856500, guid: 8fe3737d37007144896db82162ff5f23,
         type: 3}
@@ -465,6 +465,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e5d90284852ab42a2f10908206176d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &365173002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365173003}
+  - component: {fileID: 365173004}
+  m_Layer: 0
+  m_Name: Room Teleport Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365173003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365173002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.666513, y: 10.664442, z: 5.991968}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &365173004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365173002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8bc762ddca32747995dde9bf430074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Rooms:
+  - {fileID: 809698944}
+  - {fileID: 1650084973}
+  - {fileID: 117203387}
+  - {fileID: 605586073}
+  - {fileID: 749586476}
+  - {fileID: 996125467}
+  - {fileID: 423243827}
+  - {fileID: 209796679}
+  m_iRoomCount: 8
 --- !u!114 &423243827 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1411037731714480905, guid: 8fe3737d37007144896db82162ff5f23,
@@ -1458,7 +1511,7 @@ PrefabInstance:
     - target: {fileID: 8044916982538856500, guid: 8fe3737d37007144896db82162ff5f23,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8044916982538856500, guid: 8fe3737d37007144896db82162ff5f23,
         type: 3}
@@ -1731,7 +1784,7 @@ MonoBehaviour:
   m_bWalking: 0
   m_bCanMove: 1
   m_Gravity: 20
-  m_JumpSpeed: 10
+  m_JumpSpeed: 20
   m_GroundedLenience: 0.25
   m_Acceleration: 8
   m_FrictionCurve:
