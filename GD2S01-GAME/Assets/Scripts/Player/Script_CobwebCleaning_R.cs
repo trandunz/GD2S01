@@ -19,7 +19,7 @@ public class Script_CobwebCleaning_R : MonoBehaviour
     void Start()
     {
         m_Camera = FindObjectOfType<Script_MouseLook_W>().transform;
-        m_iLayerMaskIgnoreRay = LayerMask.GetMask("Ignore Raycast");
+        m_iLayerMaskIgnoreRay = LayerMask.GetMask("Player");
         m_brushAnim = GetComponentInChildren<Animator>();
     }
 
