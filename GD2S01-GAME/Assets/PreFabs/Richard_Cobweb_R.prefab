@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2561529241926011576}
   - component: {fileID: 2561529241926011577}
   - component: {fileID: 2561529241926011578}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Richard_Cobweb_R
   m_TagString: Cobweb
   m_Icon: {fileID: 0}
