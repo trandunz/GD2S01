@@ -27,6 +27,7 @@ public class Room_Swap_J : MonoBehaviour
             {
                 itemp2 = Random.Range(1, m_iRoomCount);
             }
+            itemp2 -= 1;
 
             // Set the rooms which are about to swap to record their current position as their previous position
             m_Rooms[itemp].PrevPos = m_Rooms[itemp].CurrentPos;
