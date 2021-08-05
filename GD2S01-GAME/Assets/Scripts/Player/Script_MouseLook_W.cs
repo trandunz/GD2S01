@@ -6,6 +6,7 @@ public class Script_MouseLook_W : MonoBehaviour
 {
     public float m_fSpin;
     public float m_fTilt;
+    public bool m_bIsFree;
 
     public Vector2 m_TiltExtents = new Vector2(-85.0f, 85.0f);
 
@@ -15,6 +16,7 @@ public class Script_MouseLook_W : MonoBehaviour
 
     private void Start()
     {
+        m_bIsFree = true;
         LockCursor();
     }
 
@@ -37,14 +39,21 @@ public class Script_MouseLook_W : MonoBehaviour
             return;
         }
 
-        float x = Input.GetAxisRaw("Mouse X");
-        float y = Input.GetAxisRaw("Mouse Y");
+        
+        
+        if (m_bIsFree)
+        {
+            float x = Input.GetAxisRaw("Mouse X");
+            float y = Input.GetAxisRaw("Mouse Y");
 
-        m_fSpin += x * m_fSensitivity;
-        m_fTilt -= y * m_fSensitivity;
+            m_fSpin += x * m_fSensitivity;
+            m_fTilt -= y * m_fSensitivity;
 
-        m_fTilt = Mathf.Clamp(m_fTilt, m_TiltExtents.x, m_TiltExtents.y);
+            m_fTilt = Mathf.Clamp(m_fTilt, m_TiltExtents.x, m_TiltExtents.y);
 
-        transform.localEulerAngles = new Vector3(m_fTilt, m_fSpin, 0.0f);
+            transform.localEulerAngles = new Vector3(m_fTilt, m_fSpin, 0.0f);
+
+        }
+        
     }
 }
