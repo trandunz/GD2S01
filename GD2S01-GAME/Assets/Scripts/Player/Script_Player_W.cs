@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_Player : MonoBehaviour
+
+public class Script_Player_W : MonoBehaviour
 {
     public int m_iHealth;
 
@@ -15,18 +16,21 @@ public class Script_Player : MonoBehaviour
 
     void Update()
     {
+        Debug.DrawRay(m_Camera.m_Camera.transform.localPosition, m_Camera.m_Camera.transform.forward, Color.red);
         Interact();
     }
     void Interact()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.Raycast(m_Camera.gameObject.transform.position, m_Camera.gameObject.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Doors")))
+            if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Doors")))
             {
-                if (!InteractRay.transform.GetComponentInParent<Script_Door>().m_bOpen)
+                if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
                 {
+                    
                     Debug.Log("Open Door");
-                    InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);
+                    InteractRay.transform.GetComponentInParent<Script_Door_W>().OpenDoor(InteractRay);
+                    /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
                 }
             }
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_CharacterMotor_W : Script_Player
+public class Script_CharacterMotor_W : Script_Player_W
 {
     public CharacterController m_Controller;
     public Script_MouseLook_W m_Look;
@@ -92,15 +92,17 @@ public class Script_CharacterMotor_W : Script_Player
 
             z -= Input.GetKey(KeyCode.S) ? 1.0f : 0.0f;
             z += Input.GetKey(KeyCode.W) ? 1.0f : 0.0f;
+
+            if (Input.GetKeyDown(KeyCode.Space) && m_bGrounded)
+            {
+                m_Velocity.y = m_JumpSpeed;
+                m_GroundedTimer = 0.0f;
+                m_bGrounded = false;
+                GetComponentInChildren<Animator>().SetBool("IsJumping", true);
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && m_bGrounded)
-        {
-            m_Velocity.y = m_JumpSpeed;
-            m_GroundedTimer = 0.0f;
-            m_bGrounded = false;
-            GetComponentInChildren<Animator>().SetBool("IsJumping", true);
-        }
+       
 
         Vector3 inputMoveXZ = new Vector3(x, 0.0f, z);
         /*Vector3 inputMoveForward = new Vector3(m_Velocity.x, 0.0f, m_Velocity.z);
