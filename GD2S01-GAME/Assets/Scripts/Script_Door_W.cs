@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Script_Door_W : MonoBehaviour
 {
+    public bool m_IsStairWell;
     public GameObject m_Hinge;
     public AnimationCurve DoorCurve= AnimationCurve.EaseInOut(0.0f,0.0f,1.0f,1.0f);
     public float m_RotationY;
@@ -40,8 +41,18 @@ public class Script_Door_W : MonoBehaviour
         {
             if (m_bOpen)
             {
-                CloseDoor();
-                StartCoroutine(TurnPlayerToDoor(other));
+                if (m_IsStairWell)
+                {
+                    m_isLocked = true;
+                    CloseDoor();
+                    StartCoroutine(TurnPlayerToDoor(other));
+                }
+                else
+                {
+                    CloseDoor();
+                    StartCoroutine(TurnPlayerToDoor(other));
+                }
+                
             }
             
         }
@@ -93,7 +104,7 @@ public class Script_Door_W : MonoBehaviour
 
     public void OpenDoor(RaycastHit RayCast)
     {
-        if (!m_bOpen)
+        if (!m_bOpen && !m_isLocked)
         {
             m_PrevCastNormZ = RayCast.normal.z;
             if (RayCast.normal.z > 0.0f)
