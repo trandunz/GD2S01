@@ -6,8 +6,7 @@ TagManager:
   tags:
   - LookPosition
   - Cobweb
-  - Door
-  - Window
+  - Shrub
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class Script_Player_R : MonoBehaviour
 
     private Script_CameraRefrence_W m_Camera;
     private RaycastHit InteractRay;
+    public float fInteractRange = 3;
 
     public List<GameObject> storedItems;
     [SerializeField]
@@ -35,7 +36,7 @@ public class Script_Player_R : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Doors")))
+            if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, fInteractRange, LayerMask.GetMask("Doors")))
             {
                 if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
                 {
@@ -46,7 +47,12 @@ public class Script_Player_R : MonoBehaviour
                 }
             }
         }
-        
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            GetActiveWeapon().Use(fInteractRange);
+        }
+
     }
 
     void WeaponWheel()
@@ -63,6 +69,11 @@ public class Script_Player_R : MonoBehaviour
 
             storedItems[activeItemIndex].SetActive(true);
         }
+    }
+
+    Script_Weapon_R GetActiveWeapon()
+    {
+        return storedItems[activeItemIndex].GetComponent<Script_Weapon_R>();
     }
 
 }
