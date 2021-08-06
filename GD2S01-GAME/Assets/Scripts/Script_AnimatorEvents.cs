@@ -5,6 +5,7 @@ using UnityEngine;
 public class Script_AnimatorEvents : MonoBehaviour
 {
     public AudioClip[] DoorClips;
+    public AudioClip[] WindowClips;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Script_AnimatorEvents : MonoBehaviour
     public void Open()
     {
         GetComponentInChildren<Animator>().SetBool("Open", false);
+
         GetComponentInParent<Script_Door_W>().m_bOpen = true;
         GetComponent<AudioSource>().clip = (DoorClips[0]);
         GetComponent<AudioSource>().
@@ -53,5 +55,30 @@ public class Script_AnimatorEvents : MonoBehaviour
         GetComponentInParent<Script_Door_W>().m_bOpen = true;
         GetComponent<AudioSource>().clip = (DoorClips[0]);
         GetComponent<AudioSource>().Play();
+    }
+
+    public void PlayWindowOpen()
+    {
+        GetComponent<AudioSource>().clip = (WindowClips[0]);
+        GetComponent<AudioSource>().Play();
+    }
+    public void OpenWindow()
+    {
+        GetComponentInChildren<Animator>().SetBool("Open", false);
+
+        GetComponentInParent<Script_Window_W>().m_bOpen = true;
+        
+    }
+
+    public void PlayWindowClosed()
+    {
+        GetComponent<AudioSource>().clip = (WindowClips[1]);
+        GetComponent<AudioSource>().Play();
+    }
+    public void CloseWindow()
+    {
+        GetComponentInChildren<Animator>().SetBool("Close", false);
+        GetComponentInParent<Script_Window_W>().m_bOpen = false;
+        
     }
 }
