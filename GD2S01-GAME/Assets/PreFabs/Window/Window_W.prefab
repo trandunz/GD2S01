@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 644886803572860362}
   m_Layer: 23
   m_Name: Window
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 517517027559567757}
   m_Layer: 23
   m_Name: UpperWindow
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

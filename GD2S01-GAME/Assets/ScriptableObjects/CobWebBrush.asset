@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da6c2da3d3f9bc4ca858df55c5f6b4e, type: 3}
+  m_Name: CobWebBrush
+  m_EditorClassIdentifier: 
+  ToolName: CobWebBrush
+  m_ParticleSystem: {fileID: 5154987557559714121, guid: eedfb069883f63c4395ea3d8384e5324,
+    type: 3}
+  fInteractRange: 2
+  UseSound: {fileID: 0}

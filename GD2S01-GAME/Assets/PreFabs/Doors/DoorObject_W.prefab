@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d703db29328aa034b89a675abe6ea607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IsStairWell: 0
   m_Hinge: {fileID: 3004426306093626480}
   DoorCurve:
     serializedVersion: 2
@@ -238,6 +239,7 @@ MonoBehaviour:
   DoorClips:
   - {fileID: 8300000, guid: 7a5612e49e595f44bbad93ab74424d55, type: 3}
   - {fileID: 8300000, guid: 9e2c784971f026c41b723fc76029e320, type: 3}
+  WindowClips: []
 --- !u!82 &855503758214496598
 AudioSource:
   m_ObjectHideFlags: 0
@@ -564,7 +566,7 @@ GameObject:
   - component: {fileID: 3637925828780084729}
   m_Layer: 9
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
