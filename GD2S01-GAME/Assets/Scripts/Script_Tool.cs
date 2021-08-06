@@ -37,7 +37,7 @@ public class Script_Tool : MonoBehaviour
             {
                 case TOOLTYPE.COBWEBBRUSH:
                     {
-                        m_brushAnim.Play("BrushSweepAnim");
+                        m_brushAnim.Play("UseWeapon");
                         RaycastHit hit;
                         if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, ~m_iLayerMaskIgnoreRay))
                         {
