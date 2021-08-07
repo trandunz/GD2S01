@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_CharacterMotor_W : MonoBehaviour
+public class Script_CharacterMotor_W : Script_Player_W
 {
     public CharacterController m_Controller;
     public Script_MouseLook_W m_Look;
     public GameObject m_Body;
+    public Animator m_Animator;
 
     public float m_fSprintSpeed = 25.0f;
     public float m_fCreepSpeed = 5.0f;
@@ -55,6 +56,7 @@ public class Script_CharacterMotor_W : MonoBehaviour
 
     void Update()
     {
+        
         Vector3 eulerAngles = m_Look.transform.rotation.eulerAngles;
         eulerAngles.x = 0;
         eulerAngles.z = 0;
@@ -79,88 +81,9 @@ public class Script_CharacterMotor_W : MonoBehaviour
             m_MoveSpeed = m_fMaxMoveSpeed;
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Idle");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
-            GetComponentInChildren<Animator>().SetTrigger("Walking");
-        }
-
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
-            GetComponentInChildren<Animator>().SetTrigger("Idle");
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Idle");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");*/
-            GetComponentInChildren<Animator>().SetTrigger("WalkBack");
-        }
-
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
-            GetComponentInChildren<Animator>().SetTrigger("Idle");
-        }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Idle");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");*/
-            GetComponentInChildren<Animator>().SetTrigger("WalkLeft");
-        }
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
-            GetComponentInChildren<Animator>().SetTrigger("Idle");
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Idle");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");*/
-            GetComponentInChildren<Animator>().SetTrigger("WalkRight");
-        }
-
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            /*GetComponentInChildren<Animator>().ResetTrigger("Jump");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");*/
-            GetComponentInChildren<Animator>().SetTrigger("Idle");
-        }
-
         float z = 0.0f;
         float x = 0.0f;
+        
 
         if (m_bCanMove)
         {
@@ -169,20 +92,17 @@ public class Script_CharacterMotor_W : MonoBehaviour
 
             z -= Input.GetKey(KeyCode.S) ? 1.0f : 0.0f;
             z += Input.GetKey(KeyCode.W) ? 1.0f : 0.0f;
+
+            if (Input.GetKeyDown(KeyCode.Space) && m_bGrounded)
+            {
+                m_Velocity.y = m_JumpSpeed;
+                m_GroundedTimer = 0.0f;
+                m_bGrounded = false;
+                GetComponentInChildren<Animator>().SetBool("IsJumping", true);
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            m_Velocity.y = m_JumpSpeed;
-            m_GroundedTimer = 0.0f;
-            m_bGrounded = false;
-            GetComponentInChildren<Animator>().ResetTrigger("Idle");
-            GetComponentInChildren<Animator>().ResetTrigger("Walking");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkLeft");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkRight");
-            GetComponentInChildren<Animator>().ResetTrigger("WalkBack");
-            GetComponentInChildren<Animator>().SetTrigger("Jump");
-        }
+       
 
         Vector3 inputMoveXZ = new Vector3(x, 0.0f, z);
         /*Vector3 inputMoveForward = new Vector3(m_Velocity.x, 0.0f, m_Velocity.z);
@@ -254,6 +174,7 @@ public class Script_CharacterMotor_W : MonoBehaviour
 
         if (m_bGrounded)
         {
+            
             actualMove.y = 0.0f;
             /*m_Velocity.y = 0.0f;*/
             m_fDistanceTravelled += actualMove.magnitude;
@@ -274,5 +195,11 @@ public class Script_CharacterMotor_W : MonoBehaviour
             m_bWalking = false;
             
         }
+
+        float XZMove = Mathf.Abs(z) + Mathf.Abs(x);
+
+        m_Animator.SetFloat("SpeedXZ", XZMove);
+        m_Animator.SetFloat("SpeedX", x);
+        m_Animator.SetFloat("SpeedZ", z);
     }
 }
