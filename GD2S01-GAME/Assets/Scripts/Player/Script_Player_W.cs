@@ -16,6 +16,8 @@ public class Script_Player_W : MonoBehaviour
     private RaycastHit InteractRay;
     private int m_iLayerMaskIgnoreRay;
 
+    private bool m_bOnStart;
+
 
     private void Start()
     {
@@ -26,10 +28,21 @@ public class Script_Player_W : MonoBehaviour
             go.SetActive(false); //set every item to be inactive
         }
         storedItems[activeItemIndex].SetActive(true); //set the currently held item to be active
+        m_bOnStart = true;
     }
 
+    private void Awake()
+    {
+        
+    }
     void Update()
     {
+        if (m_bOnStart)
+        {
+            m_InteractionText = GameObject.Find("InteractionText").GetComponent<TMPro.TextMeshProUGUI>();
+            m_bOnStart = false;
+        }
+        
         Debug.DrawRay(m_Camera.m_Camera.transform.localPosition, m_Camera.m_Camera.transform.forward, Color.red);
         Interact();
         InteractText();

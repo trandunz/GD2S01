@@ -19,13 +19,14 @@ public class Script_UIScripts : MonoBehaviour
     public TMPro.TextMeshProUGUI Title;
 
     public GameObject m_OptionsMenu;
+    
     // Start is called before the first frame update
     void Start()
     {
         m_Audio.value = AudioListener.volume;
         m_Audio.value = AudioListener.volume;
         apply.interactable = false;
-        
+
     }
 
     // Update is called once per frame
@@ -36,11 +37,12 @@ public class Script_UIScripts : MonoBehaviour
 
     public void SetAllActive()
     {
-        Startb.gameObject.SetActive(!Startb.gameObject.active);
-        Continue.gameObject.SetActive(!Continue.gameObject.active);
-        Options.gameObject.SetActive(!Options.gameObject.active);
-        Exit.gameObject.SetActive(!Exit.gameObject.active);
-        Title.gameObject.SetActive(!Title.gameObject.active);
+        Startb.gameObject.SetActive(!Startb.gameObject.activeSelf);
+        Continue.gameObject.SetActive(!Continue.gameObject.activeSelf);
+        Options.gameObject.SetActive(!Options.gameObject.activeSelf);
+        Exit.gameObject.SetActive(!Exit.gameObject.activeSelf);
+        Title.gameObject.SetActive(!Title.gameObject.activeSelf);
+        m_OptionsMenu.gameObject.SetActive(false);
     }
 
     public void SetInteractable(bool _truth)
@@ -53,9 +55,12 @@ public class Script_UIScripts : MonoBehaviour
         AudioListener.volume = m_Audio.value;
     }
 
-    public void SetSens(Script_MouseLook_W _mouselook)
+    public void SetSens()
     {
-        _mouselook.m_fSensitivity = MouseSens.value;
+        if (GameObject.FindObjectOfType<Script_MouseLook_W>())
+        {
+            GameObject.FindObjectOfType<Script_MouseLook_W>().m_fSensitivity = MouseSens.value;
+        }
     }
 
 

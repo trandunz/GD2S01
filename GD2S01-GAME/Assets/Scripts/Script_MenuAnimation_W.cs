@@ -13,6 +13,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
     public TMPro.TextMeshProUGUI Title;
 
     public GameObject m_OptionsMenu;
+    public GameObject m_InteractionText;
 
     public GameObject m_Canvas;
     // Start is called before the first frame update
@@ -63,7 +64,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
         m_OptionsMenu.GetComponentInParent<Script_UIScripts>().m_bIsInGame = true;
         m_OptionsMenu.gameObject.SetActive(false);
         DontDestroyOnLoad(m_Canvas);
-        
+        m_InteractionText.SetActive(true);
         SceneManager.LoadScene("Scene_W");
     }
 }

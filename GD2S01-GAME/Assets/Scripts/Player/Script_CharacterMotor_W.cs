@@ -41,11 +41,9 @@ public class Script_CharacterMotor_W : Script_Player_W
     void Start()
     {
         m_OptionsCanvas = GameObject.Instantiate(GameObject.Find("Canvas"));
-        m_OptionsCanvas.GetComponentInChildren<Script_UIScripts>().m_OptionsMenu.SetActive(true);
-        m_OptionsCanvas.GetComponentInChildren<Script_UIScripts>().MouseSens.value = m_Look.m_fSensitivity;
-        m_OptionsCanvas.GetComponentInChildren<Script_UIScripts>().SetSens(m_Look);
-        m_OptionsCanvas.GetComponentInChildren<Script_UIScripts>().m_OptionsMenu.SetActive(false);
+
         Destroy(GameObject.Find("Canvas"));
+        m_OptionsCanvas.name = "Canvas";
         m_MoveSpeed = m_fMaxMoveSpeed;
     }
 
@@ -89,7 +87,9 @@ public class Script_CharacterMotor_W : Script_Player_W
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            m_OptionsCanvas.GetComponentInChildren<Script_UIScripts>().SetAllActive();
+            m_OptionsCanvas.GetComponentInParent<Script_UIScripts>().SetAllActive();
+            m_Look.m_bIsFree = !m_Look.m_bIsFree;
+            m_bCanMove = !m_bCanMove;
         }
 
         float z = 0.0f;
