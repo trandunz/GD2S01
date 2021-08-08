@@ -65,6 +65,8 @@ public class Script_MenuAnimation_W : MonoBehaviour
         m_OptionsMenu.gameObject.SetActive(false);
         DontDestroyOnLoad(m_Canvas);
         m_InteractionText.SetActive(true);
+        /*Options.transform.position = new Vector3(Options.transform.position.x, Options.transform.position.y + 4.577f, Options.transform.position.z);
+        Exit.transform.position = new Vector3(Exit.transform.position.x, Exit.transform.position.y + 4.577f, Exit.transform.position.z);*/
         SceneManager.LoadScene("Scene_W");
     }
 }
