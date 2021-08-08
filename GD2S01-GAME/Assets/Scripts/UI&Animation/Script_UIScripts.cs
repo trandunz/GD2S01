@@ -19,6 +19,7 @@ public class Script_UIScripts : MonoBehaviour
     public TMPro.TextMeshProUGUI Title;
 
     public GameObject m_OptionsMenu;
+    public GameObject m_Inventory;
     
     // Start is called before the first frame update
     void Start()
@@ -37,11 +38,12 @@ public class Script_UIScripts : MonoBehaviour
 
     public void SetAllActive()
     {
-        Startb.gameObject.SetActive(!Startb.gameObject.activeSelf);
-        Continue.gameObject.SetActive(!Continue.gameObject.activeSelf);
+        /*Startb.gameObject.SetActive(!Startb.gameObject.activeSelf);
+        Continue.gameObject.SetActive(!Continue.gameObject.activeSelf);*/
         Options.gameObject.SetActive(!Options.gameObject.activeSelf);
         Exit.gameObject.SetActive(!Exit.gameObject.activeSelf);
         Title.gameObject.SetActive(!Title.gameObject.activeSelf);
+        m_Inventory.gameObject.SetActive(!m_Inventory.activeSelf);
         m_OptionsMenu.gameObject.SetActive(false);
     }
 
