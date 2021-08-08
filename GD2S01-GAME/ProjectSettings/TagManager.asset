@@ -12,6 +12,7 @@ TagManager:
   - Vacuum
   - Canvas
   - InteractText
+  - VacuumPart
   layers:
   - Default
   - TransparentFX

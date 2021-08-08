@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: e90a2f1787bf2df4394bd4ba92b10cd4
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 0
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
+      does not match:\n\tCannot find root motion transform 'Naruto_Uzumaki_Hips'.\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Naruto Uzumaki (Part 2)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_body
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_bottom_teeth
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_eye_l
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_eye_r
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_kami
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_kao
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Root
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Hips
+      parentName: Naruto_Uzumaki_Root
+      position: {x: -0.00181275, y: 234.421, z: -0.519328}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftUpLeg
+      parentName: Naruto_Uzumaki_Hips
+      position: {x: -24.8705, y: -11.894, z: 0.169456}
+      rotation: {x: 0.00032432226, y: -0.0044312538, z: 0.9973225, w: 0.07299381}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftLeg
+      parentName: Naruto_Uzumaki_LeftUpLeg
+      position: {x: -0.000000762727, y: 95.6281, z: -0.0000000148525}
+      rotation: {x: -0.012237385, y: 0.00025457877, z: -0.0205508, w: 0.9997139}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftFoot
+      parentName: Naruto_Uzumaki_LeftLeg
+      position: {x: 0.00000033373, y: 100.93, z: -0.000000153671}
+      rotation: {x: 0.45823377, y: 0.0017529716, z: -0.00090373994, w: 0.8888296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftToeBase
+      parentName: Naruto_Uzumaki_LeftFoot
+      position: {x: 0.0000000153234, y: 37.4165, z: 0.000000519465}
+      rotation: {x: 0.32176495, y: 0.16206208, z: -0.05600074, w: 0.9311644}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftToe_End
+      parentName: Naruto_Uzumaki_LeftToeBase
+      position: {x: 0.000000135461, y: 14.9906, z: 0.00000000274765}
+      rotation: {x: 0, y: -1.4745153e-17, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightUpLeg
+      parentName: Naruto_Uzumaki_Hips
+      position: {x: 24.8705, y: -11.894, z: 0.305069}
+      rotation: {x: -0.00036761657, y: -0.0050227875, z: 0.9973197, w: -0.07299358}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightLeg
+      parentName: Naruto_Uzumaki_RightUpLeg
+      position: {x: 0.00000097133, y: 95.6291, z: 0.0000000174045}
+      rotation: {x: -0.020728435, y: -0.0004257468, z: 0.02053045, w: 0.99957424}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightFoot
+      parentName: Naruto_Uzumaki_RightLeg
+      position: {x: -0.000000339799, y: 101.006, z: -0.000000301799}
+      rotation: {x: 0.47602007, y: -0.001778052, z: 0.0009624261, w: 0.8794321}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightToeBase
+      parentName: Naruto_Uzumaki_RightFoot
+      position: {x: -0.000000138517, y: 38.5506, z: 0.000000589828}
+      rotation: {x: 0.31203824, y: -0.1713893, z: 0.057337575, w: 0.932722}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightToe_End
+      parentName: Naruto_Uzumaki_RightToeBase
+      position: {x: -0.000000138031, y: 14.6293, z: 0.0000000303138}
+      rotation: {x: 3.469444e-18, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Spine
+      parentName: Naruto_Uzumaki_Hips
+      position: {x: -0, y: 21.3938, z: -0.763279}
+      rotation: {x: -0.017830212, y: 0, z: -0, w: 0.99984103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Spine1
+      parentName: Naruto_Uzumaki_Spine
+      position: {x: -0, y: 24.9754, z: -0.0000000192536}
+      rotation: {x: -0.000000021274953, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Spine2
+      parentName: Naruto_Uzumaki_Spine1
+      position: {x: 2.1684e-19, y: 28.5433, z: 0.00000000472068}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftShoulder
+      parentName: Naruto_Uzumaki_Spine2
+      position: {x: -13.4997, y: 26.3572, z: -0.234815}
+      rotation: {x: 0.5706331, y: -0.4141455, z: 0.57954824, w: 0.40863836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftArm
+      parentName: Naruto_Uzumaki_LeftShoulder
+      position: {x: 0.0000000178948, y: 29.1407, z: -0.000000402547}
+      rotation: {x: -0.13851409, y: 0.0014457555, z: -0.0056883697, w: 0.9903431}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftForeArm
+      parentName: Naruto_Uzumaki_LeftArm
+      position: {x: 0.0000000310734, y: 54.5373, z: -0.000000619614}
+      rotation: {x: -0.009745449, y: -0.0000147929495, z: 0.0015178572, w: 0.99995136}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHand
+      parentName: Naruto_Uzumaki_LeftForeArm
+      position: {x: 0.0000000564178, y: 62.9561, z: -0.00000136573}
+      rotation: {x: -0.024820464, y: -0.0019093645, z: 0.03246213, w: 0.9991629}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandIndex1
+      parentName: Naruto_Uzumaki_LeftHand
+      position: {x: 6.91258, y: 25.0472, z: 0.284932}
+      rotation: {x: 0.023270143, y: -0.001303567, z: -0.05592031, w: 0.99816316}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandIndex2
+      parentName: Naruto_Uzumaki_LeftHandIndex1
+      position: {x: -0.000328686, y: 7.49307, z: -0.0000000234209}
+      rotation: {x: -0.015396775, y: -3.470682e-17, z: -5.3443643e-19, w: 0.9998815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandIndex3
+      parentName: Naruto_Uzumaki_LeftHandIndex2
+      position: {x: 0.00414952, y: 7.48592, z: -0.000000374637}
+      rotation: {x: 0.02511256, y: -4.8618262e-17, z: 1.2213142e-18, w: 0.99968463}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandIndex4
+      parentName: Naruto_Uzumaki_LeftHandIndex3
+      position: {x: -0.00382083, y: 6.69868, z: -0.000000252606}
+      rotation: {x: -0.000000044824855, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandMiddle1
+      parentName: Naruto_Uzumaki_LeftHand
+      position: {x: 2.4572, y: 25.1636, z: -0.76364}
+      rotation: {x: 0.051349465, y: -0.00017527309, z: -0.0034156665, w: 0.9986749}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandMiddle2
+      parentName: Naruto_Uzumaki_LeftHandMiddle1
+      position: {x: -0.0160312, y: 8.51081, z: -0.00000015833}
+      rotation: {x: -0.04070517, y: 0.000009922412, z: 0.00039568366, w: 0.99917114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandMiddle3
+      parentName: Naruto_Uzumaki_LeftHandMiddle2
+      position: {x: 0.00596653, y: 7.92875, z: -0.000000308015}
+      rotation: {x: -0.015738381, y: -4.1648868e-17, z: -6.5556695e-19, w: 0.99987614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandMiddle4
+      parentName: Naruto_Uzumaki_LeftHandMiddle3
+      position: {x: 0.0100646, y: 6.87632, z: -0.000000273616}
+      rotation: {x: 4.336812e-19, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandPinky1
+      parentName: Naruto_Uzumaki_LeftHand
+      position: {x: -6.94233, y: 23.1663, z: 0.207465}
+      rotation: {x: 0.011247584, y: 0.0009709982, z: 0.028533172, w: 0.9995291}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandPinky2
+      parentName: Naruto_Uzumaki_LeftHandPinky1
+      position: {x: -0.00750639, y: 7.84588, z: -0.00000031344}
+      rotation: {x: -0.021209046, y: -2.0830704e-17, z: -4.418988e-19, w: 0.99977505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandPinky3
+      parentName: Naruto_Uzumaki_LeftHandPinky2
+      position: {x: 0.000209002, y: 6.33747, z: -0.00000011603}
+      rotation: {x: -0.026827903, y: -2.952218e-17, z: -7.923032e-19, w: 0.9996401}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandPinky4
+      parentName: Naruto_Uzumaki_LeftHandPinky3
+      position: {x: 0.00729747, y: 5.72017, z: -0.00000000359876}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandRing1
+      parentName: Naruto_Uzumaki_LeftHand
+      position: {x: -2.42746, y: 24.646, z: -0.528436}
+      rotation: {x: 0.034395117, y: 0.0015239584, z: 0.016351016, w: 0.9992734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandRing2
+      parentName: Naruto_Uzumaki_LeftHandRing1
+      position: {x: -0.0142469, y: 8.13535, z: -0.0000000689248}
+      rotation: {x: -0.04094212, y: 0.0000065051718, z: 0.00028824885, w: 0.99916154}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandRing3
+      parentName: Naruto_Uzumaki_LeftHandRing2
+      position: {x: 0.00559461, y: 7.77028, z: 0.00000000827515}
+      rotation: {x: -0.011350593, y: 0, z: -0, w: 0.99993557}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandRing4
+      parentName: Naruto_Uzumaki_LeftHandRing3
+      position: {x: 0.00865218, y: 6.92091, z: 0.0000000713544}
+      rotation: {x: 0.000000011168013, y: -2.9490306e-17, z: 3.293481e-25, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandThumb1
+      parentName: Naruto_Uzumaki_LeftHand
+      position: {x: 6.48532, y: 10.6187, z: 3.66921}
+      rotation: {x: 0.06768544, y: 0.017536877, z: -0.29334518, w: 0.95344627}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandThumb2
+      parentName: Naruto_Uzumaki_LeftHandThumb1
+      position: {x: 1.71181, y: 10.2356, z: 0.0000000198202}
+      rotation: {x: -0.0034229388, y: -0.00036200136, z: -0.071297176, w: 0.99744916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandThumb3
+      parentName: Naruto_Uzumaki_LeftHandThumb2
+      position: {x: -0.406219, y: 7.66193, z: 0.0000000682818}
+      rotation: {x: 0.022039246, y: -0.0052738558, z: -0.056533925, w: 0.9981435}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_LeftHandThumb4
+      parentName: Naruto_Uzumaki_LeftHandThumb3
+      position: {x: -1.30559, y: 5.57252, z: 0.00000000323797}
+      rotation: {x: 3.8163893e-17, y: -6.938896e-18, z: 2.6481532e-34, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Neck
+      parentName: Naruto_Uzumaki_Spine2
+      position: {x: -0, y: 32.1111, z: 0.000000267456}
+      rotation: {x: 0.017830212, y: -0, z: -0, w: 0.99984103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Head
+      parentName: Naruto_Uzumaki_Neck
+      position: {x: -2.1684e-19, y: 20.4134, z: -0.937921}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_HeadTop_End
+      parentName: Naruto_Uzumaki_Head
+      position: {x: -0, y: 68.0162, z: -3.12509}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Jaw
+      parentName: Naruto_Uzumaki_Head
+      position: {x: 0.00181221, y: 7.72964, z: 9.79445}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_BottomLip
+      parentName: Naruto_Uzumaki_Jaw
+      position: {x: -1.05879e-22, y: -13.4197, z: -2.8998}
+      rotation: {x: -4.440894e-16, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Left_BottomLip
+      parentName: Naruto_Uzumaki_BottomLip
+      position: {x: -4.12121, y: 2.03242, z: 0.339987}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Right_BottomLip
+      parentName: Naruto_Uzumaki_BottomLip
+      position: {x: 4.12121, y: 2.03247, z: 0.339982}
+      rotation: {x: 1.2325952e-32, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_headband_1
+      parentName: Naruto_Uzumaki_Head
+      position: {x: -5.08222, y: 24.6464, z: -25.2962}
+      rotation: {x: 8.933704e-18, y: -0.776283, z: -8.933704e-18, w: 0.63038456}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_headband_2
+      parentName: Naruto_Uzumaki_l_headband_1
+      position: {x: -31.9726, y: 0, z: 6.70444}
+      rotation: {x: 0, y: 0.108372405, z: -0, w: 0.9941104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_headband_3
+      parentName: Naruto_Uzumaki_l_headband_2
+      position: {x: -34.2585, y: -3.41061e-13, z: -0.358768}
+      rotation: {x: 0, y: 0.026508447, z: -0, w: 0.99964863}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_headband_4
+      parentName: Naruto_Uzumaki_l_headband_3
+      position: {x: -30.6636, y: -5.68434e-14, z: -1.94937}
+      rotation: {x: 0.0000000072103385, y: 0.6843053, z: 0.000000007683335, w: 0.7291956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_Inner_Brow
+      parentName: Naruto_Uzumaki_Head
+      position: {x: -3.92005, y: 28.0068, z: 24.1694}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_Center_Brow
+      parentName: Naruto_Uzumaki_l_Inner_Brow
+      position: {x: -5.07814, y: 1.90095, z: -2.5643}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_l_Outer_Brow
+      parentName: Naruto_Uzumaki_l_Center_Brow
+      position: {x: -6, y: 0, z: -4.02092}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Left_Lid
+      parentName: Naruto_Uzumaki_Head
+      position: {x: -8.99819, y: 27.044, z: 21.5536}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Left_LipCorner
+      parentName: Naruto_Uzumaki_Head
+      position: {x: -8.99819, y: 6.47671, z: 19.2906}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_headband_1
+      parentName: Naruto_Uzumaki_Head
+      position: {x: 5.08584, y: 24.646, z: -25.2962}
+      rotation: {x: -0.000000005783765, y: -0.776283, z: 0.0000000046967283, w: 0.63038456}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_headband_2
+      parentName: Naruto_Uzumaki_r_headband_1
+      position: {x: -31.9726, y: -1.7053e-13, z: 6.70444}
+      rotation: {x: 1.1800162e-13, y: 0.108372405, z: -1.2863882e-14, w: 0.9941104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_headband_3
+      parentName: Naruto_Uzumaki_r_headband_2
+      position: {x: -34.2585, y: -1.13687e-13, z: -0.358768}
+      rotation: {x: -4.439334e-16, y: 0.026508447, z: 1.1772121e-17, w: 0.99964863}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_headband_4
+      parentName: Naruto_Uzumaki_r_headband_3
+      position: {x: -30.6639, y: 5.68434e-14, z: -1.94939}
+      rotation: {x: 0, y: 0.6843053, z: -0, w: 0.7291956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_Inner_Brow
+      parentName: Naruto_Uzumaki_Head
+      position: {x: 3.92367, y: 28.0071, z: 24.1695}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_Center_Brow
+      parentName: Naruto_Uzumaki_r_Inner_Brow
+      position: {x: 5.07814, y: 1.90069, z: -2.5643}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_r_Outer_Brow
+      parentName: Naruto_Uzumaki_r_Center_Brow
+      position: {x: 6, y: 0, z: -4.0209}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Right_Lid
+      parentName: Naruto_Uzumaki_Head
+      position: {x: 9.00181, y: 27.0437, z: 21.5536}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Right_LipCorner
+      parentName: Naruto_Uzumaki_Head
+      position: {x: 9.00181, y: 6.47682, z: 19.2905}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_UpperLip
+      parentName: Naruto_Uzumaki_Head
+      position: {x: 0.00181275, y: 8.55771, z: 23.7416}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Left_UpperLip
+      parentName: Naruto_Uzumaki_UpperLip
+      position: {x: -4.1796, y: 1.26431, z: -0.254188}
+      rotation: {x: -4.440894e-16, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_Right_UpperLip
+      parentName: Naruto_Uzumaki_UpperLip
+      position: {x: 4.1796, y: 1.26431, z: -0.254173}
+      rotation: {x: -4.440894e-16, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightShoulder
+      parentName: Naruto_Uzumaki_Spine2
+      position: {x: 13.4997, y: 26.3551, z: -0.17583}
+      rotation: {x: -0.5719562, y: -0.41316614, z: 0.5783078, w: -0.40953618}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightArm
+      parentName: Naruto_Uzumaki_RightShoulder
+      position: {x: -0.0000000129078, y: 29.1407, z: -0.00000040274}
+      rotation: {x: -0.13850987, y: -0.0016030371, z: 0.005735904, w: 0.99034315}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightForeArm
+      parentName: Naruto_Uzumaki_RightArm
+      position: {x: 0.000000019193, y: 54.537, z: 0.000000307959}
+      rotation: {x: -0.009686077, y: -0.0000009297966, z: -0.0000959886, w: 0.9999531}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHand
+      parentName: Naruto_Uzumaki_RightForeArm
+      position: {x: 0.0000000696816, y: 62.9562, z: 0.0000016939}
+      rotation: {x: -0.023399554, y: -0.0023166358, z: -0.03930786, w: 0.9989505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandIndex1
+      parentName: Naruto_Uzumaki_RightHand
+      position: {x: -7.49824, y: 25.133, z: -0.0211294}
+      rotation: {x: 0.039934326, y: 0.0016212602, z: 0.040500324, w: 0.9983799}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandIndex2
+      parentName: Naruto_Uzumaki_RightHandIndex1
+      position: {x: 0.00539419, y: 7.68508, z: 0.0000000261343}
+      rotation: {x: -0.032779876, y: 0, z: -0, w: 0.9994626}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandIndex3
+      parentName: Naruto_Uzumaki_RightHandIndex2
+      position: {x: -0.0048283, y: 7.29079, z: -0.000000527947}
+      rotation: {x: 0.008665111, y: 1.2246008e-16, z: -1.0611701e-18, w: 0.99996245}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandIndex4
+      parentName: Naruto_Uzumaki_RightHandIndex3
+      position: {x: -0.000565899, y: 6.35548, z: 0.0000000177931}
+      rotation: {x: 4.712171e-15, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandMiddle1
+      parentName: Naruto_Uzumaki_RightHand
+      position: {x: -2.40993, y: 25.337, z: -0.342997}
+      rotation: {x: 0.018910106, y: 0.0005019147, z: 0.02650429, w: 0.9994697}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandMiddle2
+      parentName: Naruto_Uzumaki_RightHandMiddle1
+      position: {x: -0.0012038, y: 8.16296, z: -0.0000000840441}
+      rotation: {x: -0.024736296, y: 1.224272e-16, z: 3.0293228e-18, w: 0.999694}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandMiddle3
+      parentName: Naruto_Uzumaki_RightHandMiddle2
+      position: {x: -0.00947231, y: 7.93736, z: -0.000000129746}
+      rotation: {x: 0.0399277, y: 0.000007788857, z: 0.0006532174, w: 0.9992024}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandMiddle4
+      parentName: Naruto_Uzumaki_RightHandMiddle3
+      position: {x: 0.0106761, y: 6.45336, z: -0.0000000145015}
+      rotation: {x: 4.086898e-15, y: 1.2246469e-16, z: -5.005006e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandPinky1
+      parentName: Naruto_Uzumaki_RightHand
+      position: {x: 7.23098, y: 24.4323, z: 0.213816}
+      rotation: {x: -0.0016547559, y: 0.00002676108, z: -0.015471619, w: 0.99987894}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandPinky2
+      parentName: Naruto_Uzumaki_RightHandPinky1
+      position: {x: 0.00366088, y: 7.03794, z: 0.000000307268}
+      rotation: {x: 0.012934973, y: 1.2245444e-16, z: -1.5840773e-18, w: 0.9999164}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandPinky3
+      parentName: Naruto_Uzumaki_RightHandPinky2
+      position: {x: 0.00614541, y: 5.94864, z: 0.000000510348}
+      rotation: {x: -0.04022133, y: 0.0000113082815, z: -0.00058741035, w: 0.9991906}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandPinky4
+      parentName: Naruto_Uzumaki_RightHandPinky3
+      position: {x: -0.00980635, y: 5.29332, z: 0.000000165409}
+      rotation: {x: 5.300661e-15, y: 1.2246469e-16, z: -6.4914376e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandRing1
+      parentName: Naruto_Uzumaki_RightHand
+      position: {x: 2.67719, y: 25.2275, z: -0.258311}
+      rotation: {x: 0.013199199, y: -0.00005590158, z: -0.004239291, w: 0.9999039}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandRing2
+      parentName: Naruto_Uzumaki_RightHandRing1
+      position: {x: -0.00160471, y: 7.49391, z: 0.000000253504}
+      rotation: {x: -0.012848324, y: 1.2245457e-16, z: 1.5734659e-18, w: 0.99991745}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandRing3
+      parentName: Naruto_Uzumaki_RightHandRing2
+      position: {x: -0.00575282, y: 7.5414, z: 0.0000000546959}
+      rotation: {x: 0.04090029, y: 0.0000026421426, z: 0.00023824682, w: 0.9991632}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandRing4
+      parentName: Naruto_Uzumaki_RightHandRing3
+      position: {x: 0.0073575, y: 6.30035, z: -0.0000000404025}
+      rotation: {x: -0.000000051700145, y: 1.2246469e-16, z: 6.3314414e-24, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandThumb1
+      parentName: Naruto_Uzumaki_RightHand
+      position: {x: -6.08748, y: 10.2969, z: 3.29487}
+      rotation: {x: 0.07174352, y: -0.015859468, z: 0.27979916, w: 0.9572428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandThumb2
+      parentName: Naruto_Uzumaki_RightHandThumb1
+      position: {x: -1.79876, y: 9.76145, z: -0.000000413555}
+      rotation: {x: 0.011391573, y: -0.0008111503, z: 0.023402328, w: 0.9996609}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandThumb3
+      parentName: Naruto_Uzumaki_RightHandThumb2
+      position: {x: -0.464963, y: 8.0367, z: 0.000000113423}
+      rotation: {x: -0.0018354955, y: -0.001503573, z: 0.18720314, w: 0.98231834}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_RightHandThumb4
+      parentName: Naruto_Uzumaki_RightHandThumb3
+      position: {x: 2.26372, y: 5.60871, z: 0.000000247324}
+      rotation: {x: 0.000000031787508, y: -9.263422e-16, z: 2.944611e-23, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_tongue
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Naruto_Uzumaki_upper_teeth
+      parentName: Naruto Uzumaki (Part 2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Naruto_Uzumaki_Hips
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d5c6a386e91d06c4c9a4f09e7d7d8b22,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
