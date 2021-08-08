@@ -36,6 +36,7 @@ public class Script_MouseLook_W : MonoBehaviour
 
         if (!m_bCursorLocked)
         {
+            LockCursor();
             return;
         }
 
