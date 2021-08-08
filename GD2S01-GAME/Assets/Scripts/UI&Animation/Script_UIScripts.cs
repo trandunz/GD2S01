@@ -75,9 +75,13 @@ public class Script_UIScripts : MonoBehaviour
         }
         else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 1)
         {
-            Screen.SetResolution(1920, 1080, true);
+            Screen.SetResolution(1366, 768, true);
         }
         else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 2)
+        {
+            Screen.SetResolution(1920, 1080, true);
+        }
+        else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 3)
         {
             Screen.SetResolution(2560, 1440, true);
         }
@@ -93,9 +97,13 @@ public class Script_UIScripts : MonoBehaviour
         }
         else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 1)
         {
-            Screen.SetResolution(1920, 1080, false);
+            Screen.SetResolution(1366, 768, false);
         }
         else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 2)
+        {
+            Screen.SetResolution(1920, 1080, false);
+        }
+        else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 3)
         {
             Screen.SetResolution(2560, 1440, false);
         }
@@ -111,9 +119,13 @@ public class Script_UIScripts : MonoBehaviour
             }
             else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 1)
             {
-                Screen.SetResolution(1920, 1080, true);
+                Screen.SetResolution(1366, 768, true);
             }
             else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 2)
+            {
+                Screen.SetResolution(1920, 1080, true);
+            }
+            else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 3)
             {
                 Screen.SetResolution(2560, 1440, true);
             }
@@ -126,9 +138,13 @@ public class Script_UIScripts : MonoBehaviour
             }
             else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 1)
             {
-                Screen.SetResolution(1920, 1080, false);
+                Screen.SetResolution(1366, 768, false);
             }
             else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 2)
+            {
+                Screen.SetResolution(1920, 1080, false);
+            }
+            else if (GetComponentInChildren<TMPro.TMP_Dropdown>().value == 3)
             {
                 Screen.SetResolution(2560, 1440, false);
             }
