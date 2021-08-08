@@ -8,6 +8,7 @@ public class Script_CharacterMotor_W : Script_Player_W
     public Script_MouseLook_W m_Look;
     public GameObject m_Body;
     public Animator m_Animator;
+    private GameObject m_OptionsCanvas;
 
     public float m_fSprintSpeed = 25.0f;
     public float m_fCreepSpeed = 5.0f;
@@ -39,6 +40,10 @@ public class Script_CharacterMotor_W : Script_Player_W
 
     void Start()
     {
+        m_OptionsCanvas = GameObject.Instantiate(GameObject.Find("Canvas"));
+
+        Destroy(GameObject.Find("Canvas"));
+        m_OptionsCanvas.name = "Canvas";
         m_MoveSpeed = m_fMaxMoveSpeed;
     }
 
@@ -79,6 +84,12 @@ public class Script_CharacterMotor_W : Script_Player_W
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             m_MoveSpeed = m_fMaxMoveSpeed;
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            m_OptionsCanvas.GetComponentInParent<Script_UIScripts>().SetAllActive();
+            m_Look.m_bIsFree = !m_Look.m_bIsFree;
+            m_bCanMove = !m_bCanMove;
         }
 
         float z = 0.0f;

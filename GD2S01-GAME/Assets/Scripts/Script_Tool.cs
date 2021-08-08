@@ -10,10 +10,12 @@ public class Script_Tool : MonoBehaviour
     private Animator m_brushAnim;
 
     public ScriptableObject_Tool_W ToolData;
+    public ParticleSystem m_NonInstantiatedParticle;
     public enum TOOLTYPE
     {
         COBWEBBRUSH,
         DUSTER,
+        VACUUM,
         DEFAULT
     }
 
@@ -51,6 +53,21 @@ public class Script_Tool : MonoBehaviour
                     }
                 case TOOLTYPE.DUSTER:
                     {
+                        break;
+                    }
+
+                case TOOLTYPE.VACUUM:
+                    {
+                        RaycastHit hit;
+                        if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, ~m_iLayerMaskIgnoreRay))
+                        {
+                            m_NonInstantiatedParticle.Play();
+                            /*if (hit.transform.tag == "Cobweb")
+                            {
+                                Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
+                                Destroy(hit.transform.gameObject);
+                            }*/
+                        }
                         break;
                     }
                 default:

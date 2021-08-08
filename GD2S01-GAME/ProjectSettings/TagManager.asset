@@ -7,6 +7,11 @@ TagManager:
   - LookPosition
   - Cobweb
   - Shrub
+  - Door
+  - Window
+  - Vacuum
+  - Canvas
+  - InteractText
   layers:
   - Default
   - TransparentFX
@@ -32,7 +37,7 @@ TagManager:
   - 
   - 
   - Windows
-  - 
+  - Tools
   - 
   - 
   - 
