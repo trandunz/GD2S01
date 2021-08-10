@@ -53,10 +53,7 @@ public class Room_Swap_J : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            for (int i = 0; i < 4; i++)
-            {
-                RoomSwap();
-            }
+            RoomSwap();
         }
     }
 }
