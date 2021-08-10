@@ -45,6 +45,8 @@ public class Script_CharacterMotor_W : Script_Player_W
         Destroy(GameObject.Find("Canvas"));
         m_OptionsCanvas.name = "Canvas";
         m_MoveSpeed = m_fMaxMoveSpeed;
+        m_Look.m_bIsFree = false;
+        m_bCanMove = false;
     }
 
     private void SpawnFootstep()

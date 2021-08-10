@@ -631,6 +631,7 @@ GameObject:
   - component: {fileID: 3225245758754946384}
   - component: {fileID: 8800723312474957610}
   - component: {fileID: 2047124484613640465}
+  - component: {fileID: 6206038433836357882}
   m_Layer: 0
   m_Name: Mother
   m_TagString: Untagged
@@ -690,6 +691,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd83a033acd2e06468c8c2aff8f65635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &6206038433836357882
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2848965750391842794}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 360
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 1.8
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &2910751990430581766
 GameObject:
   m_ObjectHideFlags: 0

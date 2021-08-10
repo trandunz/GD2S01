@@ -24,6 +24,7 @@ public class Script_UIScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetAllActive();
         m_Audio.value = AudioListener.volume;
         m_Audio.value = AudioListener.volume;
         apply.interactable = false;

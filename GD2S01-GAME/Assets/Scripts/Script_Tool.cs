@@ -49,6 +49,7 @@ public class Script_Tool : MonoBehaviour
                             {
                                 Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
                                 Destroy(hit.transform.gameObject);
+                                GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>().m_CWNumber--;
                             }
                         }
                         break;
