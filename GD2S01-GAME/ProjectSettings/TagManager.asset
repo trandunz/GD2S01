@@ -13,6 +13,8 @@ TagManager:
   - Canvas
   - InteractText
   - VacuumPart
+  - TaskList
+  - TaskFinished
   layers:
   - Default
   - TransparentFX

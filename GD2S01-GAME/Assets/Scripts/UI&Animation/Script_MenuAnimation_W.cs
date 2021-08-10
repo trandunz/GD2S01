@@ -12,6 +12,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
     public Button Exit;
     public TMPro.TextMeshProUGUI Title;
 
+    public GameObject m_Inventory;
     public GameObject m_OptionsMenu;
     public GameObject m_InteractionText;
 

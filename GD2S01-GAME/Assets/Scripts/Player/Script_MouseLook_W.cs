@@ -17,7 +17,8 @@ public class Script_MouseLook_W : MonoBehaviour
     private void Start()
     {
         m_bIsFree = true;
-        LockCursor();
+        m_bCursorLocked = false;
+        /*LockCursor();*/
     }
 
     private void LockCursor()
