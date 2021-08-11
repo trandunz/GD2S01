@@ -1,21 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Script_AnimatorEvents : MonoBehaviour
 {
+    /*private TMPro.TextMeshProUGUI m_InteractionText;*/
+
     public AudioClip[] DoorClips;
     public AudioClip[] WindowClips;
+
+    private bool m_bOnStart;
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*m_bOnStart = true;*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        /*if (m_bOnStart)
+        {
+            m_InteractionText = GameObject.Find("InteractionText").GetComponent<TMPro.TextMeshProUGUI>();
+            m_bOnStart = false;
+        }*/
     }
 
     void OnLanding()
@@ -67,7 +76,7 @@ public class Script_AnimatorEvents : MonoBehaviour
         GetComponentInChildren<Animator>().SetBool("Open", false);
 
         GetComponentInParent<Script_Window_W>().m_bOpen = true;
-        
+
     }
 
     public void PlayWindowClosed()

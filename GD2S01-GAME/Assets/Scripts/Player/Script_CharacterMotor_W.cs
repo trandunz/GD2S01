@@ -111,7 +111,7 @@ public class Script_CharacterMotor_W : Script_Player_W
                 m_Velocity.y = m_JumpSpeed;
                 m_GroundedTimer = 0.0f;
                 m_bGrounded = false;
-                GetComponentInChildren<Animator>().SetBool("IsJumping", true);
+                /*GetComponentInChildren<Animator>().SetBool("IsJumping", true);*/
             }
         }
 

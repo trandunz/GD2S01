@@ -8,6 +8,7 @@ public class Script_Tool : MonoBehaviour
     private GameObject m_Camera;
     private int m_iLayerMaskIgnoreRay;
     private Animator m_brushAnim;
+    private Script_ObjectiveManager_W m_ObjectiveManager;
 
     public ScriptableObject_Tool_W ToolData;
     public ParticleSystem m_NonInstantiatedParticle;
@@ -25,6 +26,7 @@ public class Script_Tool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
         m_Camera = GetComponentInParent<Script_CameraRefrence_W>().m_Camera.gameObject;
         m_iLayerMaskIgnoreRay = LayerMask.GetMask("Player") + LayerMask.GetMask("Default") + LayerMask.GetMask("Windows") + LayerMask.GetMask("Doors") + LayerMask.GetMask("UI");
         m_brushAnim = GetComponentInChildren<Animator>();
@@ -49,7 +51,12 @@ public class Script_Tool : MonoBehaviour
                             {
                                 Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
                                 Destroy(hit.transform.gameObject);
-                                GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>().m_CWNumber--;
+                                m_ObjectiveManager.m_CWNumber--;
+                                if (m_ObjectiveManager.m_CWNumber <= 0)
+                                {
+                                    m_ObjectiveManager.removeTask("- Clean Up Cobwebs");
+                                }
+
                             }
                         }
                         break;
@@ -64,8 +71,17 @@ public class Script_Tool : MonoBehaviour
                         RaycastHit hit;
                         if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, ~m_iLayerMaskIgnoreRay))
                         {
-                            Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
-                            Destroy(hit.collider.gameObject);
+                            if (hit.transform.tag == "Cobweb")
+                            {
+                                Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
+                                Destroy(hit.transform.gameObject);
+                                m_ObjectiveManager.m_CWNumber--;
+                                if (m_ObjectiveManager.m_CWNumber <= 0)
+                                {
+                                    m_ObjectiveManager.removeTask("- Clean Up Cobwebs");
+                                }
+
+                            }
                         }
                         break;
                     }
@@ -77,7 +93,7 @@ public class Script_Tool : MonoBehaviour
             
         }
 
-        if (Input.GetMouseButton(0))
+        /*if (Input.GetMouseButton(0))
         {
             switch (m_ToolType)
             {
@@ -109,7 +125,7 @@ public class Script_Tool : MonoBehaviour
                 m_NonInstantiatedParticle.Pause();
             }
             
-        }
+        }*/
     }
 
     /*public void OnCollisionEnter(Collision collisionInfo)

@@ -15,6 +15,7 @@ TagManager:
   - VacuumPart
   - TaskList
   - TaskFinished
+  - WindowObject
   layers:
   - Default
   - TransparentFX

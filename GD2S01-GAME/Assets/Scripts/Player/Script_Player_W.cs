@@ -18,9 +18,11 @@ public class Script_Player_W : MonoBehaviour
 
     private bool m_bOnStart;
 
+    private Script_ObjectiveManager_W m_ObjectiveManager;
 
     private void Start()
     {
+        m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
         m_Camera = GetComponent<Script_CameraRefrence_W>();
         m_iLayerMaskIgnoreRay = LayerMask.GetMask("Player");
         foreach (GameObject go in storedItems)
@@ -65,16 +67,20 @@ public class Script_Player_W : MonoBehaviour
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Windows")))
             {
-                if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
+                /*if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
                 {
 
-                    Debug.Log("Open Door");
+                    Debug.Log("Open Window");
                     InteractRay.transform.GetComponentInParent<Script_Window_W>().OpenWindow();
-                    /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
-                }
-                else if (InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
+                }*/
+                if (InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
                 {
                     InteractRay.transform.GetComponentInParent<Script_Window_W>().CloseWindow();
+                    m_ObjectiveManager.m_WNumber--;
+                    if (m_ObjectiveManager.m_WNumber <= 0)
+                    {
+                        m_ObjectiveManager.removeTask("- Close The Windows");
+                    }
                 }
             }
         }
@@ -87,7 +93,7 @@ public class Script_Player_W : MonoBehaviour
         {
             if (InteractRay.collider.tag is "Door")
             {
-                Debug.Log("Looking At Door");
+                /*Debug.Log("Looking At Door");*/
 
                 if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
                 {
@@ -100,16 +106,16 @@ public class Script_Player_W : MonoBehaviour
             }
             else if (InteractRay.collider.tag is "Window")
             {
-                Debug.Log("Looking At Window");
+                /*Debug.Log("Looking At Window");*/
 
-                if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
+                /*if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
                 {
                     m_InteractionText.text = "Press [" + "E" + "] To Open";
                     var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
                     InteractBackGroundColour.a = 1.0f;
                     m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }
-                else if(InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
+                }*/
+                if(InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
                 {
                     m_InteractionText.text = "Press [" + "E" + "] To Close";
                     var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
