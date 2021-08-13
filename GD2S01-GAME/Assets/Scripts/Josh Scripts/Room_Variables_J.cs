@@ -8,6 +8,8 @@ public class Room_Variables_J : MonoBehaviour
     public Vector3 CurrentPos;
     public Vector3 PrevPos;
 
+    public bool m_CanMove;
+
     // Start is called before the first frame update
     void Start()
     {

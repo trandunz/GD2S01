@@ -7,6 +7,15 @@ TagManager:
   - LookPosition
   - Cobweb
   - Shrub
+  - Door
+  - Window
+  - Vacuum
+  - Canvas
+  - InteractText
+  - VacuumPart
+  - TaskList
+  - TaskFinished
+  - WindowObject
   layers:
   - Default
   - TransparentFX
@@ -19,7 +28,7 @@ TagManager:
   - Player
   - Doors
   - Interactables
-  - 
+  - Post Processing
   - 
   - 
   - 
@@ -32,7 +41,7 @@ TagManager:
   - 
   - 
   - Windows
-  - 
+  - Tools
   - 
   - 
   - 
