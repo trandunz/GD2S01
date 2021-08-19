@@ -26,10 +26,7 @@ public class Script_Tool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
-        m_Camera = GetComponentInParent<Script_CameraRefrence_W>().m_Camera.gameObject;
-        m_iLayerMaskIgnoreRay = LayerMask.GetMask("Player") + LayerMask.GetMask("Default") + LayerMask.GetMask("Windows") + LayerMask.GetMask("Doors") + LayerMask.GetMask("UI");
-        m_brushAnim = GetComponentInChildren<Animator>();
+        Setup();
     }
 
 
@@ -44,21 +41,8 @@ public class Script_Tool : MonoBehaviour
                 case TOOLTYPE.COBWEBBRUSH:
                     {
                         m_brushAnim.Play("UseWeapon");
-                        RaycastHit hit;
-                        if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, ~m_iLayerMaskIgnoreRay))
-                        {
-                            if (hit.transform.tag == "Cobweb")
-                            {
-                                Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
-                                Destroy(hit.transform.gameObject);
-                                m_ObjectiveManager.m_CWNumber--;
-                                if (m_ObjectiveManager.m_CWNumber <= 0)
-                                {
-                                    m_ObjectiveManager.removeTask("- Clean Up Cobwebs");
-                                }
-
-                            }
-                        }
+                        GetComponent<AudioSource>().Play();
+                        CleanCobweb();
                         break;
                     }
                 case TOOLTYPE.DUSTER:
@@ -68,21 +52,7 @@ public class Script_Tool : MonoBehaviour
 
                 case TOOLTYPE.VACUUM:
                     {
-                        RaycastHit hit;
-                        if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, ~m_iLayerMaskIgnoreRay))
-                        {
-                            if (hit.transform.tag == "Cobweb")
-                            {
-                                Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
-                                Destroy(hit.transform.gameObject);
-                                m_ObjectiveManager.m_CWNumber--;
-                                if (m_ObjectiveManager.m_CWNumber <= 0)
-                                {
-                                    m_ObjectiveManager.removeTask("- Clean Up Cobwebs");
-                                }
-
-                            }
-                        }
+                        CleanCobweb();
                         break;
                     }
                 default:
@@ -126,6 +96,64 @@ public class Script_Tool : MonoBehaviour
             }
             
         }*/
+    }
+
+    private void Setup()
+    {
+        m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
+        m_Camera = GetComponentInParent<Script_CameraRefrence_W>().m_Camera.gameObject;
+        m_iLayerMaskIgnoreRay = LayerMask.GetMask("Player") + LayerMask.GetMask("Default") + LayerMask.GetMask("Windows") + LayerMask.GetMask("Doors") + LayerMask.GetMask("UI");
+        m_brushAnim = GetComponentInChildren<Animator>();
+        if (ToolData.UseSound != null && GetComponent<AudioSource>() != null) //if tool doesnt have sound, it wont break
+            GetComponent<AudioSource>().clip = ToolData.UseSound;
+    }
+
+    public void SetFindCorrectHandPosition()
+    {
+        switch (m_ToolType)
+        {
+            case TOOLTYPE.COBWEBBRUSH:
+                {
+                    Transform posRot = GameObject.Find("CobwebBrushPosition").transform; //find the desired position/rotation
+                    transform.localPosition = posRot.localPosition; //set LOCAL position and rotation
+                    transform.localRotation = posRot.localRotation;
+                    break;
+                }
+            case TOOLTYPE.DUSTER:
+                {
+                    break;
+                }
+
+            case TOOLTYPE.VACUUM:
+                {
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
+
+        Setup(); //make sure everything is connected and found
+    }
+
+    private void CleanCobweb()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, ~m_iLayerMaskIgnoreRay))
+        {
+            if (hit.transform.tag == "Cobweb")
+            {
+                Destroy(Instantiate(ToolData.m_ParticleSystem, hit.point, hit.transform.rotation), 2);
+                Destroy(hit.transform.gameObject);
+                m_ObjectiveManager.m_CWNumber--;
+                if (m_ObjectiveManager.m_CWNumber <= 0)
+                {
+                    m_ObjectiveManager.removeTask("- Clean Up Cobwebs");
+                }
+
+            }
+        }
     }
 
     /*public void OnCollisionEnter(Collision collisionInfo)

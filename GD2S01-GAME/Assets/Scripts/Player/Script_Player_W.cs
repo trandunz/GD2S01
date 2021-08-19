@@ -83,6 +83,19 @@ public class Script_Player_W : MonoBehaviour
                     }
                 }
             }
+            else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Tools")))
+            {
+                GameObject foundTool = InteractRay.transform.parent.parent.gameObject; //find the object we are looking at
+                if (foundTool.GetComponent<Script_Tool>().ToolData.inPlayerPossession == false) //are we not holding it?
+                {
+                    foundTool.GetComponent<Script_Tool>().ToolData.inPlayerPossession = true; //we are now holding it
+                    foundTool.transform.SetParent(m_Camera.m_Camera.transform); //it will follow our rotation and position
+                    foundTool.GetComponent<Script_Tool>().SetFindCorrectHandPosition(); //it is now in the correct place
+                    AddStoredTool(foundTool); //we can use the scroll wheel
+
+                }
+
+            }
         }
         
     }
@@ -134,6 +147,12 @@ public class Script_Player_W : MonoBehaviour
             InteractBackGroundColour.a = 0.0f;
             m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
         }
+    }
+
+    void AddStoredTool(GameObject theTool)
+    {
+        storedItems.Add(theTool);
+        theTool.SetActive(false);
     }
 
     void WeaponWheel()
