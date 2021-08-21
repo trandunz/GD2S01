@@ -11,4 +11,6 @@ public class ScriptableObject_Tool_W : ScriptableObject
     public float fInteractRange = 2;
 
     public AudioClip UseSound;
+
+    public bool inPlayerPossession = false;
 }
