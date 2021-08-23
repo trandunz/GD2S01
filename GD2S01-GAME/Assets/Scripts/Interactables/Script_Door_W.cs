@@ -45,12 +45,12 @@ public class Script_Door_W : MonoBehaviour
                 {
                     m_isLocked = true;
                     CloseDoor();
-                    StartCoroutine(TurnPlayerToDoor(other));
+                    /*StartCoroutine(TurnPlayerToDoor(other));*/
                 }
                 else
                 {
                     CloseDoor();
-                    StartCoroutine(TurnPlayerToDoor(other));
+                    /*StartCoroutine(TurnPlayerToDoor(other));*/
                 }
                 
             }
