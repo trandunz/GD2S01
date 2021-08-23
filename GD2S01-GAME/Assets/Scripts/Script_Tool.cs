@@ -17,6 +17,7 @@ public class Script_Tool : MonoBehaviour
         COBWEBBRUSH,
         DUSTER,
         VACUUM,
+        WINDOWCLEAN,
         DEFAULT
     }
 
@@ -53,6 +54,11 @@ public class Script_Tool : MonoBehaviour
                 case TOOLTYPE.VACUUM:
                     {
                         CleanCobweb();
+                        break;
+                    }
+                case TOOLTYPE.WINDOWCLEAN:
+                    {
+                       // CleanWindows();
                         break;
                     }
                 default:
@@ -125,6 +131,10 @@ public class Script_Tool : MonoBehaviour
                 }
 
             case TOOLTYPE.VACUUM:
+                {
+                    break;
+                }
+            case TOOLTYPE.WINDOWCLEAN:
                 {
                     break;
                 }
