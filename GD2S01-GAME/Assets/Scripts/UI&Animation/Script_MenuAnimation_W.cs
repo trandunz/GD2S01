@@ -39,6 +39,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       /* Application.backgroundLoadingPriority = ThreadPriority.Low;*/
         Screen.SetResolution(1280, 720, true);
         m_OptionsMenu.gameObject.SetActive(true);
         m_OptionsMenu.GetComponentInParent<Script_UIScripts>().m_bIsInGame = false;
@@ -86,8 +87,9 @@ public class Script_MenuAnimation_W : MonoBehaviour
         DontDestroyOnLoad(m_Canvas);
         m_InteractionText.SetActive(true);
 
+        
         // REQUIRES PLAYER_W TO FUNCTION ON FIRST LAUNCH, PLAY THE GAME FROM MAIN SCREEN, SET THE ENUM TO DESIRED VALUE.
-        switch(m_Scene)
+        switch (m_Scene)
         {
             case SCENES.WILL:
                 {
