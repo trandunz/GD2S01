@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Vacuum
   m_EditorClassIdentifier: 
   ToolName: Vacuum
-  m_ParticleSystem: {fileID: 5161354917950561762, guid: a02f220dbc354b94d87198dae62a628c,
+  m_ParticleSystem: {fileID: 5154987557559714121, guid: eedfb069883f63c4395ea3d8384e5324,
     type: 3}
-  fInteractRange: 4
+  fInteractRange: 5
   UseSound: {fileID: 0}
+  inPlayerPossession: 0

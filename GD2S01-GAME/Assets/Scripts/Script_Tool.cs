@@ -12,6 +12,7 @@ public class Script_Tool : MonoBehaviour
 
     public ScriptableObject_Tool_W ToolData;
     public ParticleSystem m_NonInstantiatedParticle;
+    [SerializeField] private ParticleSystem m_ActionParticles;
     public enum TOOLTYPE
     {
         COBWEBBRUSH,
@@ -53,6 +54,8 @@ public class Script_Tool : MonoBehaviour
 
                 case TOOLTYPE.VACUUM:
                     {
+                        
+                        
                         CleanCobweb();
                         break;
                     }
@@ -66,42 +69,23 @@ public class Script_Tool : MonoBehaviour
                         break;
                     }
             }
-            
         }
-
-        /*if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            switch (m_ToolType)
+            if (m_ActionParticles.isPlaying == false)
             {
-                case TOOLTYPE.COBWEBBRUSH:
-                    {
-                        break;
-                    }
-                case TOOLTYPE.DUSTER:
-                    {
-                        break;
-                    }
-
-                case TOOLTYPE.VACUUM:
-                    {
-                        m_NonInstantiatedParticle.Play();
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
+                m_ActionParticles.Play();
             }
-
         }
         else
         {
-            if (m_ToolType == TOOLTYPE.VACUUM)
+            if (m_ActionParticles.isPlaying == true)
             {
-                m_NonInstantiatedParticle.Pause();
+                m_ActionParticles.Stop();
             }
-            
-        }*/
+        }
+
+     
     }
 
     private void Setup()
