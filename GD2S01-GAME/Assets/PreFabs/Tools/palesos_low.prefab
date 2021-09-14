@@ -770,6 +770,11 @@ MonoBehaviour:
   m_Camera: {fileID: 0}
   ToolData: {fileID: 11400000, guid: 060404e4875ea3e47b4a47e6fc7c3f06, type: 2}
   m_NonInstantiatedParticle: {fileID: 9069270259023208220}
+  m_SprayBottleParticles: {fileID: 0}
+  m_SprayOrigin: {fileID: 0}
+  m_RagTransform: {fileID: 0}
+  m_InvisibleHandPos: {fileID: 0}
+  m_RagMoveAmount: 0
   m_ToolType: 2
 --- !u!65 &2072707780984829702
 BoxCollider:

@@ -46,6 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 0}
   ToolData: {fileID: 11400000, guid: 1684bf497cb15e4428a43b9caf6666f7, type: 2}
+  m_NonInstantiatedParticle: {fileID: 0}
+  m_SprayBottleParticles: {fileID: 0}
+  m_SprayOrigin: {fileID: 0}
+  m_RagTransform: {fileID: 0}
+  m_InvisibleHandPos: {fileID: 0}
+  m_RagMoveAmount: 0
   m_ToolType: 0
 --- !u!95 &2019857463209292532
 Animator:

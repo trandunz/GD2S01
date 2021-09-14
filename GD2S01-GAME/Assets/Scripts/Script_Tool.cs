@@ -12,6 +12,13 @@ public class Script_Tool : MonoBehaviour
 
     public ScriptableObject_Tool_W ToolData;
     public ParticleSystem m_NonInstantiatedParticle;
+
+    [Header("Window Cleaning")]
+    public ParticleSystem m_SprayBottleParticles;
+    public Transform m_SprayOrigin;
+    public Transform m_RagTransform;
+    public Transform m_InvisibleHandPos;
+    public float m_RagMoveAmount;
     public enum TOOLTYPE
     {
         COBWEBBRUSH,
@@ -58,7 +65,8 @@ public class Script_Tool : MonoBehaviour
                     }
                 case TOOLTYPE.WINDOWCLEAN:
                     {
-                       // CleanWindows();
+                        m_SprayBottleParticles.Play();
+                        // CleanWindows();
                         break;
                     }
                 default:
@@ -69,6 +77,72 @@ public class Script_Tool : MonoBehaviour
             
         }
 
+        if (Input.GetMouseButton(1))
+        {
+            switch (m_ToolType)
+            {
+                case TOOLTYPE.COBWEBBRUSH:
+                    {
+                        break;
+                    }
+                case TOOLTYPE.DUSTER:
+                    {
+                        break;
+                    }
+
+                case TOOLTYPE.VACUUM:
+                    {
+                        break;
+                    }
+                case TOOLTYPE.WINDOWCLEAN:
+                    {
+                        if (!GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Rag_Animation"))
+                        {
+                            GetComponentInChildren<Animator>().SetTrigger("RagWipe");
+                        }
+                        if (!GetComponent<AudioSource>().isPlaying)
+                        {
+                            GetComponent<AudioSource>().Play();
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            switch (m_ToolType)
+            {
+                case TOOLTYPE.COBWEBBRUSH:
+                    {
+                        break;
+                    }
+                case TOOLTYPE.DUSTER:
+                    {
+                        break;
+                    }
+
+                case TOOLTYPE.VACUUM:
+                    {
+                        break;
+                    }
+                case TOOLTYPE.WINDOWCLEAN:
+                    {
+                        GetComponentInChildren<Animator>().ResetTrigger("RagWipe");
+                        GetComponentInChildren<Animator>().SetTrigger("ReturnToIdle");
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+
+        }
         /*if (Input.GetMouseButton(0))
         {
             switch (m_ToolType)

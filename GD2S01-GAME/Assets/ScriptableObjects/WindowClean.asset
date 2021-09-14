@@ -16,5 +16,5 @@ MonoBehaviour:
   m_ParticleSystem: {fileID: 5154987557559714121, guid: eedfb069883f63c4395ea3d8384e5324,
     type: 3}
   fInteractRange: 2
-  UseSound: {fileID: 8300000, guid: 889a122c09ab30e42a19dc093e64fd73, type: 3}
+  UseSound: {fileID: 8300000, guid: 481b65e7eb920774782d19c9546e91e6, type: 3}
   inPlayerPossession: 0
