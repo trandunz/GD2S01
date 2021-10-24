@@ -19,6 +19,9 @@ public class Script_Tool : MonoBehaviour
     public Transform m_RagTransform;
     public Transform m_InvisibleHandPos;
     public float m_RagMoveAmount;
+    public AudioSource m_Spray;
+    public AudioSource m_Wipe;
+
     public enum TOOLTYPE
     {
         COBWEBBRUSH,
@@ -66,7 +69,8 @@ public class Script_Tool : MonoBehaviour
                 case TOOLTYPE.WINDOWCLEAN:
                     {
                         m_SprayBottleParticles.Play();
-                        // CleanWindows();
+                        m_Spray.Play();
+                        WetWindow();
                         break;
                     }
                 default:
@@ -100,9 +104,9 @@ public class Script_Tool : MonoBehaviour
                         {
                             GetComponentInChildren<Animator>().SetTrigger("RagWipe");
                         }
-                        if (!GetComponent<AudioSource>().isPlaying)
+                        if (!m_Wipe.isPlaying)
                         {
-                            GetComponent<AudioSource>().Play();
+                            m_Wipe.Play();
                         }
                         break;
                     }
@@ -134,6 +138,7 @@ public class Script_Tool : MonoBehaviour
                     {
                         GetComponentInChildren<Animator>().ResetTrigger("RagWipe");
                         GetComponentInChildren<Animator>().SetTrigger("ReturnToIdle");
+                        CleanWindow();
                         break;
                     }
                 default:
@@ -240,6 +245,29 @@ public class Script_Tool : MonoBehaviour
         }
     }
 
+    private void CleanWindow()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
+        {
+            hit.transform.GetComponentInParent<Script_Window_W>().CleanWindow();
+
+            //m_ObjectiveManager.m_CWNumber--;
+            //if (m_ObjectiveManager.m_CWNumber <= 0)
+            //{
+            //    m_ObjectiveManager.removeTask("- Windows");
+            //}
+        }
+    }
+
+    private void WetWindow()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
+        {
+            hit.transform.GetComponentInParent<Script_Window_W>().WetWindow();
+        }
+    }
     /*public void OnCollisionEnter(Collision collisionInfo)
     {
         // We check if the object we collided with has a tag called "Obstacle".
