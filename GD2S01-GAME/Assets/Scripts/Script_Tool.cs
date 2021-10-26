@@ -191,6 +191,11 @@ public class Script_Tool : MonoBehaviour
         m_brushAnim = GetComponentInChildren<Animator>();
         if (ToolData.UseSound != null && GetComponent<AudioSource>() != null) //if tool doesnt have sound, it wont break
             GetComponent<AudioSource>().clip = ToolData.UseSound;
+
+        foreach (Animator ani in GetComponentsInChildren<Animator>())
+        {
+            ani.keepAnimatorControllerStateOnDisable = true; //so the animation keeps playing after we swap weapon out
+        }
     }
 
     public void SetFindCorrectHandPosition()
