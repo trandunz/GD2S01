@@ -59,6 +59,7 @@ public class Script_Window_W : MonoBehaviour
             m_WetWindow.SetActive(true);
             m_DirtyWindow.SetActive(false);
             m_isWet = true;
+
         }
     }
 }
