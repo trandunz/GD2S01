@@ -106,8 +106,9 @@ public class Script_Tool : MonoBehaviour
                         }
                         if (!m_Wipe.isPlaying)
                         {
-                            m_Wipe.Play();
+                            CleanTheWindow();
                         }
+
                         break;
                     }
                 default:
@@ -138,7 +139,6 @@ public class Script_Tool : MonoBehaviour
                     {
                         GetComponentInChildren<Animator>().ResetTrigger("RagWipe");
                         GetComponentInChildren<Animator>().SetTrigger("ReturnToIdle");
-                        CleanWindow();
                         break;
                     }
                 default:
@@ -245,12 +245,15 @@ public class Script_Tool : MonoBehaviour
         }
     }
 
-    private void CleanWindow()
+    private void CleanTheWindow()
     {
         RaycastHit hit;
         if(Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
         {
-            hit.transform.GetComponentInParent<Script_Window_W>().CleanWindow();
+            if(hit.transform.GetComponentInParent<Script_Window_W>().CleanWindow())
+            {
+                 m_Wipe.Play();
+            }
 
             //m_ObjectiveManager.m_CWNumber--;
             //if (m_ObjectiveManager.m_CWNumber <= 0)

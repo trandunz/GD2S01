@@ -18,8 +18,10 @@ public class Script_Window_W : MonoBehaviour
     {
         m_bOpen = false;
         m_isLocked = false;
+
         m_isClean = false;
         m_isWet = false;
+
     }
     public void CloseWindow()
     {
@@ -37,22 +39,25 @@ public class Script_Window_W : MonoBehaviour
         }
     }
 
-    public void CleanWindow()
+    public bool CleanWindow()
     {
         if(m_isWet)
         {
-            m_WetWindow.SetActive(false);
             m_CleanWindow.SetActive(true);
+            m_WetWindow.SetActive(false);
             m_isClean = true;
+
+            return true;
         }
+        return false;
     }
 
     public void WetWindow()
     {
         if(!m_isClean)
         {
-            m_DirtyWindow.SetActive(false);
             m_WetWindow.SetActive(true);
+            m_DirtyWindow.SetActive(false);
             m_isWet = true;
         }
     }

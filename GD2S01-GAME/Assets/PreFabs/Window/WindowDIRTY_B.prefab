@@ -1026,7 +1026,7 @@ GameObject:
   - component: {fileID: 6230583409901130601}
   - component: {fileID: 6627304542745182161}
   m_Layer: 23
-  m_Name: WindowClean
+  m_Name: WindowWet
   m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
