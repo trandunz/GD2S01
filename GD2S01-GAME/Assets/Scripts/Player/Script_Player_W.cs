@@ -20,6 +20,11 @@ public class Script_Player_W : MonoBehaviour
 
     private Script_ObjectiveManager_W m_ObjectiveManager;
 
+    private bool m_bInCloset = false;
+
+    Transform m_ClosetEntryPos;
+    Transform m_ClosetExitPos;
+
     private void Start()
     {
         m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
@@ -49,6 +54,7 @@ public class Script_Player_W : MonoBehaviour
         Interact();
         InteractText();
         WeaponWheel();
+        CheckIfInCloset();
     }
 
     void Interact()
@@ -95,6 +101,22 @@ public class Script_Player_W : MonoBehaviour
 
                 }
 
+            }
+            else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))
+            {
+                m_ClosetEntryPos = InteractRay.transform.GetComponent<Script_Closet_W>().m_EntryPosition;
+                m_ClosetExitPos = InteractRay.transform.GetComponent<Script_Closet_W>().m_ExitPosition;
+
+                if (!m_bInCloset)
+                {
+                    m_bInCloset = !m_bInCloset;
+                    transform.position = m_ClosetEntryPos.position;
+                }
+            }
+            else if (m_bInCloset)
+            {
+                m_bInCloset = !m_bInCloset;
+                transform.position = m_ClosetExitPos.position;
             }
         }
         
@@ -168,6 +190,20 @@ public class Script_Player_W : MonoBehaviour
                 activeItemIndex = 0;
 
             storedItems[activeItemIndex].SetActive(true);
+        }
+    }
+
+    void CheckIfInCloset()
+    {
+        if (m_bInCloset)
+        {
+            GetComponent<CharacterController>().enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+        }
+        else if (GetComponent<CharacterController>().enabled == false)
+        {
+            GetComponent<CharacterController>().enabled = true;
+            GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }
