@@ -12,6 +12,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
     private GameObject[] m_WindowObjectList;
     public int m_WNumber;
     public int m_CWNumber;
+    public string m_CWString;
 
     private bool m_GrabText;
     private void Start()
@@ -22,8 +23,10 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         m_CWNumber = m_CobwebObjectList.Length;
         m_WNumber = m_WindowObjectList.Length;
 
+        m_CWString = "- Clean Up Cobwebs.";
+
         addTask("- Close The Windows");
-        addTask("- Clean Up Cobwebs");
+        addTask(m_CWString);
     }
 
     private void Update()
@@ -37,7 +40,14 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             m_GrabText = false;
         }
 
-        
+        m_CWString = "- Clean Up Cobwebs. " + m_CWNumber + " Remaining.";
+        if (m_CWNumber > 0)
+            m_TaskList[1] = m_CWString; //cobwebs
+        if (m_CWNumber <= 0)
+        {
+            m_TaskList[1] = m_CWString;
+            removeTask(m_TaskList[1]);
+        }
 
         UpdateText(m_TaskListText, m_TaskList);
         UpdateText(m_CompletedListText, m_CompletedList);
