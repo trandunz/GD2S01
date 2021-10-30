@@ -255,7 +255,7 @@ public class Script_Tool : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
         {
-            if(hit.transform.GetComponentInParent<Script_Window_W>().CleanWindow())
+            if(hit.transform.GetComponentInParent<WindowClean_B>().CleanWindow())
             {
                  m_Wipe.Play();
             }
@@ -273,7 +273,7 @@ public class Script_Tool : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
         {
-            hit.transform.GetComponentInParent<Script_Window_W>().WetWindow();
+            hit.transform.GetComponentInParent<WindowClean_B>().WetWindow();
         }
     }
     /*public void OnCollisionEnter(Collision collisionInfo)
