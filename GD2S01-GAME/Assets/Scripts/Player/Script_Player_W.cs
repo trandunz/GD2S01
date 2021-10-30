@@ -102,6 +102,14 @@ public class Script_Player_W : MonoBehaviour
                 }
 
             }
+            else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Interactables")))
+            {
+                if (InteractRay.transform.gameObject.tag is "Dish")
+                {
+                    m_ObjectiveManager.m_DishNumber--;
+                    Destroy(InteractRay.transform.gameObject);
+                }
+            }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))
             {
                 m_ClosetEntryPos = InteractRay.transform.GetComponent<Script_Closet_W>().m_EntryPosition;

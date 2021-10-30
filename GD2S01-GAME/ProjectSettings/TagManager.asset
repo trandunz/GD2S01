@@ -17,6 +17,8 @@ TagManager:
   - TaskFinished
   - WindowObject
   - Closet
+  - DishWasher
+  - Dish
   layers:
   - Default
   - TransparentFX
