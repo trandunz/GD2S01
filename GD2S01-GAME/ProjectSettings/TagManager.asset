@@ -16,6 +16,7 @@ TagManager:
   - TaskList
   - TaskFinished
   - WindowObject
+  - Closet
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
   - 
   - Windows
   - Tools
-  - 
+  - Closet
   - 
   - 
   - 

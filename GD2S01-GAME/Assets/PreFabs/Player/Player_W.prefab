@@ -888,7 +888,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 25167415
+    m_Bits: 58721847
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2851,7 +2851,6 @@ GameObject:
   - component: {fileID: 5894245490649207818}
   - component: {fileID: 8562308620122771537}
   - component: {fileID: 5080432448816032043}
-  - component: {fileID: 852328456297772592}
   - component: {fileID: 1704557239281137817}
   m_Layer: 8
   m_Name: Player_W
@@ -2992,20 +2991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 7159195842833923814}
---- !u!136 &852328456297772592
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8437860633364292419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!54 &1704557239281137817
 Rigidbody:
   m_ObjectHideFlags: 0
