@@ -10,8 +10,10 @@ public class Script_ObjectiveManager_W : MonoBehaviour
 
     private GameObject[] m_CobwebObjectList;
     private GameObject[] m_WindowObjectList;
+    private GameObject[] m_DishObjectList;
     public int m_WNumber;
     public int m_CWNumber;
+    public int m_DishNumber;
 
     private bool m_GrabText;
     private void Start()
@@ -19,11 +21,14 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         m_GrabText = true;
         m_CobwebObjectList = GameObject.FindGameObjectsWithTag("Cobweb");
         m_WindowObjectList = GameObject.FindGameObjectsWithTag("WindowObject");
+        m_DishObjectList = GameObject.FindGameObjectsWithTag("Dish");
         m_CWNumber = m_CobwebObjectList.Length;
         m_WNumber = m_WindowObjectList.Length;
+        m_DishNumber = m_DishObjectList.Length;
 
         addTask("- Close The Windows");
         addTask("- Clean Up Cobwebs");
+        addTask("- Clean Up Dishes");
     }
 
     private void Update()
@@ -37,11 +42,8 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             m_GrabText = false;
         }
 
-        
-
         UpdateText(m_TaskListText, m_TaskList);
         UpdateText(m_CompletedListText, m_CompletedList);
-
     }
 
     public void addTask(string newInput)
@@ -73,6 +75,6 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         {
             _text.text = _text.text + s + "\n";
         }
-        
+
     }
 }
