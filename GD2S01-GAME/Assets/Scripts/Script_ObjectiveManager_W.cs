@@ -73,7 +73,22 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         _text.text = "";
         foreach (string s in _StringList)
         {
-            _text.text = _text.text + s + "\n";
+            if (s == "- Close The Windows")
+            {
+                _text.text = _text.text + s + "(" + m_WNumber + " Remaining)" + "\n";
+            }
+            else if (s == "- Clean Up Cobwebs")
+            {
+                _text.text = _text.text + s + "(" + m_CWNumber + " Remaining)" + "\n";
+            }
+            else if (s == "- Clean Up Dishes")
+            {
+                _text.text = _text.text + s + "(" + m_DishNumber + " Remaining)" + "\n";
+            }
+            else
+            {
+                _text.text = _text.text + s + "\n";
+            }
         }
 
     }
