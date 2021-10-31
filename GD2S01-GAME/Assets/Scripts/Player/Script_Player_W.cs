@@ -25,6 +25,8 @@ public class Script_Player_W : MonoBehaviour
     Transform m_ClosetEntryPos;
     Transform m_ClosetExitPos;
 
+
+    [SerializeField] AudioClip m_TaskCompleted;
     private void Start()
     {
         m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
@@ -86,6 +88,7 @@ public class Script_Player_W : MonoBehaviour
                     if (m_ObjectiveManager.m_WNumber <= 0)
                     {
                         m_ObjectiveManager.removeTask("- Close The Windows");
+                        
                     }
                 }
             }
@@ -108,6 +111,10 @@ public class Script_Player_W : MonoBehaviour
                 {
                     m_ObjectiveManager.m_DishNumber--;
                     Destroy(InteractRay.transform.gameObject);
+                    if (m_ObjectiveManager.m_DishNumber <= 0)
+                    {
+                        m_ObjectiveManager.removeTask("- Clean Up Dishes");
+                    }
                 }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))
@@ -130,6 +137,7 @@ public class Script_Player_W : MonoBehaviour
         
     }
 
+   
     void InteractText()
     {
         if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, ~m_iLayerMaskIgnoreRay))
