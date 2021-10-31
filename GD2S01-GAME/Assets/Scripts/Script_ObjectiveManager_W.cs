@@ -15,6 +15,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
     public int m_CWNumber;
     public int m_DishNumber;
 
+    [SerializeField] AudioClip m_TaskCompleted;
     private bool m_GrabText;
     private void Start()
     {
@@ -59,6 +60,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             if (s == newInput)
             {
                 Debug.Log("Completed (" + newInput + ")");
+                PlayTaskCompleted();
                 m_TaskList.Remove(newInput);
                 m_CompletedList.Add(newInput);
                 break;
@@ -68,6 +70,10 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         
     }
 
+    void PlayTaskCompleted()
+    {
+        GetComponent<AudioSource>().PlayOneShot(m_TaskCompleted);
+    }
     private void UpdateText(TMPro.TextMeshProUGUI _text , List<string> _StringList )
     {
         _text.text = "";
