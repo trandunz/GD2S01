@@ -1252,7 +1252,8 @@ MonoBehaviour:
   m_CompletedListText: {fileID: 0}
   m_WNumber: 0
   m_CWNumber: 0
-  m_CWString: 
+  m_DishNumber: 0
+  m_TaskCompleted: {fileID: 0}
 --- !u!4 &416203464
 Transform:
   m_ObjectHideFlags: 0
@@ -2988,47 +2989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dcd0cd5d35e134499ced2a56e3acf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brushes: []
-  builtBrushes: []
-  materialMeshDictionary:
-    mappings: []
-  collisionMeshDictionary: []
-  polygonsRemoved: 0
-  buildSettings:
-    GenerateCollisionMeshes: 1
-    GenerateTangents: 1
-    OptimizeGeometry: 0
-    SaveMeshesAsAssets: 0
-    GenerateLightmapUVs: 0
-    UnwrapAngleError: 0.08
-    UnwrapAreaError: 0.15
-    UnwrapHardAngle: 88
-    UnwrapPackMargin: 0.00390625
-    ShadowCastingMode: 2
-    ReflectionProbeUsage: 1
-    DefaultPhysicsMaterial: {fileID: 0}
-    DefaultVisualMaterial: {fileID: 2100000, guid: 31f4273077e614c418ae54ecae8d21e4,
-      type: 2}
-    IsBuilt: 0
-  lastBuildSettings:
-    GenerateCollisionMeshes: 1
-    GenerateTangents: 1
-    OptimizeGeometry: 0
-    SaveMeshesAsAssets: 0
-    GenerateLightmapUVs: 0
-    UnwrapAngleError: 0.08
-    UnwrapAreaError: 0.15
-    UnwrapHardAngle: 88
-    UnwrapPackMargin: 0.00390625
-    ShadowCastingMode: 2
-    ReflectionProbeUsage: 1
-    DefaultPhysicsMaterial: {fileID: 0}
-    DefaultVisualMaterial: {fileID: 0}
-    IsBuilt: 0
-  firstRun: 1
-  modelVersion: 0
-  autoRebuild: 0
-  lastSelectedBrush: {fileID: 0}
 --- !u!114 &961504822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,17 +3001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb86d77c673844ed195cf2620ab10fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildContext:
-    buildMetrics:
-      TotalMeshes: 0
-      TotalVertices: 0
-      TotalTriangles: 0
-      BuildTime: 0
-      BuildMetaData: 
-    visualPolygons: []
-    visualPolygonMappings: []
-    VisualPolygonIndex: []
-    CollisionPolygonIndex: []
 --- !u!1001 &988961953
 PrefabInstance:
   m_ObjectHideFlags: 0

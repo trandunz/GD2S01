@@ -2896,6 +2896,7 @@ MonoBehaviour:
   - {fileID: 7938479732597312138}
   m_InteractionText: {fileID: 268355861192430586}
   activeItemIndex: 0
+  m_TaskCompleted: {fileID: 0}
 --- !u!143 &5894245490649207818
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2930,6 +2931,7 @@ MonoBehaviour:
   storedItems: []
   m_InteractionText: {fileID: 0}
   activeItemIndex: 0
+  m_TaskCompleted: {fileID: 0}
   m_Controller: {fileID: 5894245490649207818}
   m_Look: {fileID: 7159195842833923814}
   m_Body: {fileID: 61673309355836485}
@@ -2974,8 +2976,11 @@ MonoBehaviour:
   m_GroundedTimer: 0
   m_fDistanceTravelled: 0
   m_FeetPosition: {fileID: 872135223823134159}
-  m_FootstepSounds: []
-  m_FootstepLength: 0.5
+  m_FootstepSounds:
+  - {fileID: 7931522877697906323, guid: c58411b39dc778d42aeb9a213a529fa0, type: 3}
+  - {fileID: 7931522877697906323, guid: 416d22663701a0e4dbdb106715aa9425, type: 3}
+  - {fileID: 7931522877697906323, guid: f7d5c6ddaffa8174594d5ebed302af71, type: 3}
+  m_FootstepLength: 2
   m_JumpFootstepTimer: 0
   m_JumpFootstepCooldown: 0.5
 --- !u!114 &5080432448816032043

@@ -56,8 +56,8 @@ public class Script_CharacterMotor_W : Script_Player_W
             m_bRightFoot = !m_bRightFoot;
             Vector3 footOffset = new Vector3(m_bRightFoot ? 1.0f : -1.0f, 0.0f, 0.0f) * 0.25f;
             footOffset = Quaternion.Euler(0.0f, m_Look.m_fSpin, 0.0f) * footOffset;
-
-            Destroy(Instantiate(m_FootstepSounds[Random.Range(0, 1)], m_FeetPosition.position + footOffset, m_FeetPosition.rotation), 1.0f);
+            Debug.Log("Spawned footstep");
+            Destroy(Instantiate(m_FootstepSounds[Random.Range(0, m_FootstepSounds.Length)], m_FeetPosition.position + footOffset, m_FeetPosition.rotation), 1.0f);
         }
     }
 
@@ -160,9 +160,8 @@ public class Script_CharacterMotor_W : Script_Player_W
         m_TrueVelocity.x *= m_MoveSpeed;
         m_TrueVelocity.z *= m_MoveSpeed;
 
-        Vector3 oldPos = transform.position;
         m_Controller.Move(m_TrueVelocity * Time.deltaTime);
-        Vector3 actualMove = transform.position - oldPos;
+        Vector3 footstepMove = m_TrueVelocity*Time.deltaTime;
 
         m_JumpFootstepTimer -= Time.deltaTime;
         m_GroundedTimer -= Time.deltaTime;
@@ -187,10 +186,8 @@ public class Script_CharacterMotor_W : Script_Player_W
 
         if (m_bGrounded)
         {
-            
-            actualMove.y = 0.0f;
-            /*m_Velocity.y = 0.0f;*/
-            m_fDistanceTravelled += actualMove.magnitude;
+            footstepMove.y = 0;
+            m_fDistanceTravelled += footstepMove.magnitude;
             if (m_fDistanceTravelled > m_FootstepLength)
             {
                 m_fDistanceTravelled -= m_FootstepLength;
