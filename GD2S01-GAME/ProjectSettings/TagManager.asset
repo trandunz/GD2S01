@@ -22,6 +22,7 @@ TagManager:
   - AbeTest
   - AbeLights
   - AbeBulbs
+  - Clothes
   layers:
   - Default
   - TransparentFX
