@@ -19,6 +19,9 @@ TagManager:
   - Closet
   - DishWasher
   - Dish
+  - AbeTest
+  - AbeLights
+  - AbeBulbs
   layers:
   - Default
   - TransparentFX
