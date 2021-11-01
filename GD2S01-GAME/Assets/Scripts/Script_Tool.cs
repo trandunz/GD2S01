@@ -21,6 +21,7 @@ public class Script_Tool : MonoBehaviour
     public float m_RagMoveAmount;
     public AudioSource m_Spray;
     public AudioSource m_Wipe;
+    public int m_SprayCooldown;
 
     public enum TOOLTYPE
     {
@@ -45,6 +46,8 @@ public class Script_Tool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_SprayCooldown--;
+
         if (Input.GetMouseButtonDown(0))
         {
             switch(m_ToolType)
@@ -68,9 +71,13 @@ public class Script_Tool : MonoBehaviour
                     }
                 case TOOLTYPE.WINDOWCLEAN:
                     {
-                        m_SprayBottleParticles.Play();
-                        m_Spray.Play();
-                        WetWindow();
+                        if (m_SprayCooldown < 0)
+                        {
+                            m_SprayBottleParticles.Play();
+                            m_Spray.Play();
+                            WetWindow();
+                            m_SprayCooldown = 75;
+                        }
                         break;
                     }
                 default:
