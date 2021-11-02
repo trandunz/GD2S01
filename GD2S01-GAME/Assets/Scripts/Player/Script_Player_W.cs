@@ -116,6 +116,15 @@ public class Script_Player_W : MonoBehaviour
                         m_ObjectiveManager.removeTask("- Clean Up Dishes");
                     }
                 }
+                if (InteractRay.transform.gameObject.tag is "Clothes")
+                {
+                    m_ObjectiveManager.m_clothesNumber--;
+                    Destroy(InteractRay.transform.gameObject);
+                    if (m_ObjectiveManager.m_clothesNumber <= 0)
+                    {
+                        m_ObjectiveManager.removeTask("- Pick Up Clothes");
+                    }
+                }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))
             {

@@ -11,9 +11,11 @@ public class Script_ObjectiveManager_W : MonoBehaviour
     private GameObject[] m_CobwebObjectList;
     private GameObject[] m_WindowObjectList;
     private GameObject[] m_DishObjectList;
+    private GameObject[] m_ClothesObjectList;
     public int m_WNumber;
     public int m_CWNumber;
     public int m_DishNumber;
+    public int m_clothesNumber;
 
     [SerializeField] AudioClip m_TaskCompleted;
     private bool m_GrabText;
@@ -23,13 +25,16 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         m_CobwebObjectList = GameObject.FindGameObjectsWithTag("Cobweb");
         m_WindowObjectList = GameObject.FindGameObjectsWithTag("WindowObject");
         m_DishObjectList = GameObject.FindGameObjectsWithTag("Dish");
+        m_ClothesObjectList = GameObject.FindGameObjectsWithTag("Clothes");
         m_CWNumber = m_CobwebObjectList.Length;
         m_WNumber = m_WindowObjectList.Length;
         m_DishNumber = m_DishObjectList.Length;
+        m_clothesNumber = m_ClothesObjectList.Length;
 
         addTask("- Close The Windows");
         addTask("- Clean Up Cobwebs");
         addTask("- Clean Up Dishes");
+        addTask("- Pick Up Clothes");
     }
 
     private void Update()
@@ -90,6 +95,10 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             else if (s == "- Clean Up Dishes")
             {
                 _text.text = _text.text + s + "(" + m_DishNumber + " Remaining)" + "\n";
+            }
+            else if (s == "- Pick Up Clothes")
+            {
+                _text.text = _text.text + s + "(" + m_clothesNumber + " Remaining)" + "\n";
             }
             else
             {

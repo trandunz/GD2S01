@@ -16,6 +16,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
         JOSH,
         BEN,
         RICH,
+        RICHPOINTSTEST,
         LACH,
         DEFAULT
     };
@@ -109,6 +110,11 @@ public class Script_MenuAnimation_W : MonoBehaviour
             case SCENES.MAIN:
                 {
                     SceneManager.LoadScene("MAINScene");
+                    break;
+                }
+            case SCENES.RICHPOINTSTEST:
+                {
+                    SceneManager.LoadScene("Scene_R_PointsTest");
                     break;
                 }
             default:
