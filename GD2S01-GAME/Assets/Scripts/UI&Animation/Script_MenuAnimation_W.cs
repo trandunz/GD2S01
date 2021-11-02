@@ -109,7 +109,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
                 }
             case SCENES.MAIN:
                 {
-                    SceneManager.LoadScene("MAINScene");
+                    SceneManager.LoadScene("MainGame");
                     break;
                 }
             case SCENES.RICHPOINTSTEST:
@@ -119,7 +119,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
                 }
             default:
                 {
-                    SceneManager.LoadScene("MAINScene");
+                    SceneManager.LoadScene("MainGame");
                     break;
                 }
         }

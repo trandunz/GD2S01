@@ -3772,25 +3772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4119872166138269934}
     m_Modifications:
-    - target: {fileID: 21337766142372741, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_WetMaterial
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 498045256766405214, guid: 31a75df9710adda49abf9df0d5141e73,
         type: 3}
       propertyPath: m_Name
       value: WindowDIRTY_B
-      objectReference: {fileID: 0}
-    - target: {fileID: 1034345757625482000, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5607897343196398242, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6745161044496802379, guid: 31a75df9710adda49abf9df0d5141e73,
         type: 3}
@@ -3846,26 +3831,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7096006241261248029, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7406581700560952518, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7752702728520982917, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8798851701380021072, guid: 31a75df9710adda49abf9df0d5141e73,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31a75df9710adda49abf9df0d5141e73, type: 3}
