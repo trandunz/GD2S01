@@ -73,7 +73,7 @@ public class Script_Player_W : MonoBehaviour
                     /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
                 }
             }
-            else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Windows")))
+            else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 3.0f, LayerMask.GetMask("Windows")))
             {
                 /*if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
                 {

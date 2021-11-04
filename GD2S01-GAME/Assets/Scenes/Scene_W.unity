@@ -1309,17 +1309,17 @@ PrefabInstance:
     - target: {fileID: 5947751810927621196, guid: 5e12d353bebb7d3498752fc3f7d8c233,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.67
+      value: -47.92
       objectReference: {fileID: 0}
     - target: {fileID: 5947751810927621196, guid: 5e12d353bebb7d3498752fc3f7d8c233,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2094524
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 5947751810927621196, guid: 5e12d353bebb7d3498752fc3f7d8c233,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.108
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5947751810927621196, guid: 5e12d353bebb7d3498752fc3f7d8c233,
         type: 3}
@@ -5402,7 +5402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &980089068
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5420,7 +5420,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &980089069
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5434,7 +5434,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &980089070
 MeshCollider:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5448,7 +5448,7 @@ MeshCollider:
   m_Mesh: {fileID: 936930028}
 --- !u!114 &980089071
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5467,7 +5467,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 15834
+    surfaceParameter: 15918
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 324930553548294894
@@ -8268,7 +8268,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 9dc74f631a21e22498ca18478175a003, type: 3}
 --- !u!1 &1622268409
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8287,7 +8287,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &1622268410
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8301,7 +8301,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1622268411
 MeshRenderer:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8340,7 +8340,7 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!33 &1622268412
 MeshFilter:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8348,7 +8348,7 @@ MeshFilter:
   m_Mesh: {fileID: 1886814086}
 --- !u!114 &1622268413
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8367,7 +8367,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 15870
+    surfaceParameter: 15920
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 324930553548294894
@@ -11167,7 +11167,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2097472876
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11186,7 +11186,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 15834
+    surfaceParameter: 15918
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 6302404790872414741
@@ -11198,7 +11198,7 @@ MonoBehaviour:
   LightingHashValue: 6302404790872414741
 --- !u!64 &2097472877
 MeshCollider:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 16
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -2,3 +2,4 @@
 * text=auto
 *.obj filter=lfs diff=lfs merge=lfs -text
 *.tga filter=lfs diff=lfs merge=lfs -text
+MansionREALTIME.prefab filter=lfs diff=lfs merge=lfs -text
