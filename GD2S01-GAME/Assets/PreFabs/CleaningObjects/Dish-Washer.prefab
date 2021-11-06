@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8628627735961075417}
   - component: {fileID: 5992543956448367323}
   - component: {fileID: 1075664789387828319}
+  - component: {fileID: 939298428264135846}
   m_Layer: 10
-  m_Name: Washing Machine
+  m_Name: Dish-Washer
   m_TagString: DishWasher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,3 +94,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &939298428264135846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037196161780960303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a648c121f84867343addcba7e7fd6d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

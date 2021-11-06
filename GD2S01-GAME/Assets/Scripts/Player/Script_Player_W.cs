@@ -25,6 +25,8 @@ public class Script_Player_W : MonoBehaviour
     Transform m_ClosetEntryPos;
     Transform m_ClosetExitPos;
 
+    int m_CurrentlyHeldDishes = 0;
+
 
     [SerializeField] AudioClip m_TaskCompleted;
     private void Start()
@@ -107,9 +109,18 @@ public class Script_Player_W : MonoBehaviour
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Interactables")))
             {
+                if (InteractRay.transform.gameObject.tag is "DishWasher")
+                {
+                    while (m_CurrentlyHeldDishes > 0)
+                    {
+                        InteractRay.transform.GetComponent<Script_Dishwasher>().AddDish();
+                        m_CurrentlyHeldDishes--;
+                        Debug.Log("Player Put Dish In Dishwasher!");
+                    }
+                }
                 if (InteractRay.transform.gameObject.tag is "Dish")
                 {
-                    m_ObjectiveManager.m_DishNumber--;
+                    m_CurrentlyHeldDishes++;
                     Destroy(InteractRay.transform.gameObject);
                     if (m_ObjectiveManager.m_DishNumber <= 0)
                     {
