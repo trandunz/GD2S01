@@ -111,21 +111,12 @@ public class Script_Player_W : MonoBehaviour
             {
                 if (InteractRay.transform.gameObject.tag is "DishWasher")
                 {
-                    while (m_CurrentlyHeldDishes > 0)
-                    {
-                        InteractRay.transform.GetComponent<Script_Dishwasher>().AddDish();
-                        m_CurrentlyHeldDishes--;
-                        Debug.Log("Player Put Dish In Dishwasher!");
-                    }
+                    HandleDishWasher();
                 }
                 if (InteractRay.transform.gameObject.tag is "Dish")
                 {
                     m_CurrentlyHeldDishes++;
                     Destroy(InteractRay.transform.gameObject);
-                    if (m_ObjectiveManager.m_DishNumber <= 0)
-                    {
-                        m_ObjectiveManager.removeTask("- Clean Up Dishes");
-                    }
                 }
                 if (InteractRay.transform.gameObject.tag is "Clothes")
                 {
@@ -240,6 +231,20 @@ public class Script_Player_W : MonoBehaviour
         {
             GetComponent<CharacterController>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
+
+    void HandleDishWasher()
+    {
+        while (m_CurrentlyHeldDishes > 0)
+        {
+            InteractRay.transform.GetComponent<Script_Dishwasher>().AddDish();
+            m_CurrentlyHeldDishes--;
+            Debug.Log("Player Put Dish In Dishwasher!");
+            if (m_ObjectiveManager.m_DishNumber <= 0)
+            {
+                m_ObjectiveManager.removeTask("- Clean Up Dishes");
+            }
         }
     }
 }
