@@ -23,6 +23,7 @@ TagManager:
   - AbeLights
   - AbeBulbs
   - Clothes
+  - WashingMachine
   layers:
   - Default
   - TransparentFX

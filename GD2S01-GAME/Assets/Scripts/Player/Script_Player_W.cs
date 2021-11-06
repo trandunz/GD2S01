@@ -26,6 +26,7 @@ public class Script_Player_W : MonoBehaviour
     Transform m_ClosetExitPos;
 
     int m_CurrentlyHeldDishes = 0;
+    int m_CurrentlyHeldClothes = 0;
 
 
     [SerializeField] AudioClip m_TaskCompleted;
@@ -118,14 +119,14 @@ public class Script_Player_W : MonoBehaviour
                     m_CurrentlyHeldDishes++;
                     Destroy(InteractRay.transform.gameObject);
                 }
+                if (InteractRay.transform.gameObject.tag is "WashingMachine")
+                {
+                    HandleWashingMachine();
+                }
                 if (InteractRay.transform.gameObject.tag is "Clothes")
                 {
-                    m_ObjectiveManager.m_clothesNumber--;
+                    m_CurrentlyHeldClothes++;
                     Destroy(InteractRay.transform.gameObject);
-                    if (m_ObjectiveManager.m_clothesNumber <= 0)
-                    {
-                        m_ObjectiveManager.removeTask("- Pick Up Clothes");
-                    }
                 }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))
@@ -244,6 +245,20 @@ public class Script_Player_W : MonoBehaviour
             if (m_ObjectiveManager.m_DishNumber <= 0)
             {
                 m_ObjectiveManager.removeTask("- Clean Up Dishes");
+            }
+        }
+    }
+
+    void HandleWashingMachine()
+    {
+        while (m_CurrentlyHeldClothes > 0)
+        {
+            InteractRay.transform.GetComponent<Script_WashingMachine>().AddClothes();
+            m_CurrentlyHeldClothes--;
+            Debug.Log("Clothes are in the washing machine now");
+            if (m_ObjectiveManager.m_clothesNumber <= 0)
+            {
+                m_ObjectiveManager.removeTask("- Wash Clothes");
             }
         }
     }
