@@ -9,6 +9,7 @@ public class Script_Tool : MonoBehaviour
     private int m_iLayerMaskIgnoreRay;
     private Animator m_brushAnim;
     private Script_ObjectiveManager_W m_ObjectiveManager;
+    private bool m_TourchOn = true;
 
     public ScriptableObject_Tool_W ToolData;
     public ParticleSystem m_NonInstantiatedParticle;
@@ -29,6 +30,7 @@ public class Script_Tool : MonoBehaviour
         DUSTER,
         VACUUM,
         WINDOWCLEAN,
+        TOURCH,
         DEFAULT
     }
 
@@ -40,8 +42,6 @@ public class Script_Tool : MonoBehaviour
     {
         Setup();
     }
-
-
 
     // Update is called once per frame
     void Update()
@@ -77,6 +77,21 @@ public class Script_Tool : MonoBehaviour
                             m_Spray.Play();
                             WetWindow();
                             m_SprayCooldown = 75;
+                        }
+                        break;
+                    }
+                case TOOLTYPE.TOURCH:
+                    {
+                        GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
+                        m_TourchOn = !m_TourchOn;
+
+                        if (m_TourchOn)
+                        {
+                            GetComponentInChildren<Light>().enabled = true;
+                        }
+                        else
+                        {
+                            GetComponentInChildren<Light>().enabled = false;
                         }
                         break;
                     }

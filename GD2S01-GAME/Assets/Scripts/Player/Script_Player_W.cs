@@ -25,8 +25,12 @@ public class Script_Player_W : MonoBehaviour
     Transform m_ClosetEntryPos;
     Transform m_ClosetExitPos;
 
+    int m_CurrentlyHeldDishes = 0;
+    int m_CurrentlyHeldClothes = 0;
+
 
     [SerializeField] AudioClip m_TaskCompleted;
+    [SerializeField] AudioClip m_PickedUpItem;
     private void Start()
     {
         m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
@@ -107,23 +111,30 @@ public class Script_Player_W : MonoBehaviour
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Interactables")))
             {
+                if (InteractRay.transform.gameObject.tag is "DishWasher")
+                {
+                    HandleDishWasher();
+                }
                 if (InteractRay.transform.gameObject.tag is "Dish")
                 {
-                    m_ObjectiveManager.m_DishNumber--;
+                    m_CurrentlyHeldDishes++;
                     Destroy(InteractRay.transform.gameObject);
-                    if (m_ObjectiveManager.m_DishNumber <= 0)
-                    {
-                        m_ObjectiveManager.removeTask("- Clean Up Dishes");
-                    }
+                    GetComponent<AudioSource>().PlayOneShot(m_PickedUpItem);
+                }
+                if (InteractRay.transform.gameObject.tag is "WashingMachine")
+                {
+                    HandleWashingMachine();
                 }
                 if (InteractRay.transform.gameObject.tag is "Clothes")
                 {
-                    m_ObjectiveManager.m_clothesNumber--;
+                    m_CurrentlyHeldClothes++;
                     Destroy(InteractRay.transform.gameObject);
-                    if (m_ObjectiveManager.m_clothesNumber <= 0)
-                    {
-                        m_ObjectiveManager.removeTask("- Pick Up Clothes");
-                    }
+                    GetComponent<AudioSource>().PlayOneShot(m_PickedUpItem);
+                }
+                if (InteractRay.transform.gameObject.tag is "FuseBox")
+                {
+                    m_ObjectiveManager.removeTask("- Turn On Power");
+                    GameObject.FindGameObjectWithTag("LightManager").GetComponent<Script_LightManager>().ToggleLights();
                 }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))
@@ -151,42 +162,49 @@ public class Script_Player_W : MonoBehaviour
     {
         if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, ~m_iLayerMaskIgnoreRay))
         {
-            if (InteractRay.collider.tag is "Door")
+            if (InteractRay.collider.tag is "Door" && !InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
             {
-                /*Debug.Log("Looking At Door");*/
-
-                if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
-                {
-                    m_InteractionText.text = "Press [" + "E" + "] To Open";
-                    var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                    InteractBackGroundColour.a = 1.0f;
-                    m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }
-                
+                m_InteractionText.text = "Press [" + "E" + "] To Open";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
             }
-            else if (InteractRay.collider.tag is "Window")
+            else if (InteractRay.collider.tag is "Window" && InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
             {
-                /*Debug.Log("Looking At Window");*/
-
-                /*if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
-                {
-                    m_InteractionText.text = "Press [" + "E" + "] To Open";
-                    var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                    InteractBackGroundColour.a = 1.0f;
-                    m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }*/
-                if(InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
-                {
-                    m_InteractionText.text = "Press [" + "E" + "] To Close";
-                    var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                    InteractBackGroundColour.a = 1.0f;
-                    m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }
-
+                m_InteractionText.text = "Press [" + "E" + "] To Close";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
             }
-
+            else if (InteractRay.collider.tag is "Dish" || InteractRay.collider.tag is "Clothes")
+            {
+                m_InteractionText.text = "Press [" + "E" + "] To Pickup";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else if (InteractRay.collider.tag is "DishWasher" || InteractRay.collider.tag is "WashingMachine")
+            {
+                m_InteractionText.text = "Press [" + "E" + "] To Deposit";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else if (InteractRay.collider.tag is "FuseBox")
+            {
+                m_InteractionText.text = "Press [" + "E" + "] To Flip Switch";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else
+            {
+                m_InteractionText.text = null;
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 0.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
         }
-
         else
         {
             m_InteractionText.text = null;
@@ -194,6 +212,7 @@ public class Script_Player_W : MonoBehaviour
             InteractBackGroundColour.a = 0.0f;
             m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
         }
+
     }
 
     void AddStoredTool(GameObject theTool)
@@ -229,6 +248,34 @@ public class Script_Player_W : MonoBehaviour
         {
             GetComponent<CharacterController>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
+
+    void HandleDishWasher()
+    {
+        while (m_CurrentlyHeldDishes > 0)
+        {
+            InteractRay.transform.GetComponent<Script_Dishwasher>().AddDish();
+            m_CurrentlyHeldDishes--;
+            Debug.Log("Player Put Dish In Dishwasher!");
+            if (m_ObjectiveManager.m_DishNumber <= 0)
+            {
+                m_ObjectiveManager.removeTask("- Clean Up Dishes");
+            }
+        }
+    }
+
+    void HandleWashingMachine()
+    {
+        while (m_CurrentlyHeldClothes > 0)
+        {
+            InteractRay.transform.GetComponent<Script_WashingMachine>().AddClothes();
+            m_CurrentlyHeldClothes--;
+            Debug.Log("Clothes are in the washing machine now");
+            if (m_ObjectiveManager.m_clothesNumber <= 0)
+            {
+                m_ObjectiveManager.removeTask("- Wash Clothes");
+            }
         }
     }
 }

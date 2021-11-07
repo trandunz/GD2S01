@@ -40,8 +40,6 @@ public class Script_MouseLook_W : MonoBehaviour
             LockCursor();
             return;
         }
-
-        
         
         if (m_bIsFree)
         {
