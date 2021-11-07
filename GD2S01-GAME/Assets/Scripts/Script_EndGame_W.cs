@@ -63,6 +63,9 @@ public class Script_EndGame_W : MonoBehaviour
         {
             StartCoroutine(EndGameCoroutine());
             doOnce = true;
+            /*GameObject.FindGameObjectWithTag("Player").GetComponent<Script_CharacterMotor_W>().m_bCanMove = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Script_CameraRefrence_W>().m_Camera.GetComponent<Script_MouseLook_W>().m_bIsFree = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Script_CameraRefrence_W>().m_Camera.GetComponent<Animator>().SetTrigger("EndGame");*/
         }
        
     }

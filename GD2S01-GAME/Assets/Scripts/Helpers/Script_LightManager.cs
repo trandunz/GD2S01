@@ -6,7 +6,9 @@ public class Script_LightManager : MonoBehaviour
 {
     GameObject[] m_Lights;
     [SerializeField] AudioClip m_FlipSwitch;
-    [SerializeField] AudioClip m_PowerDown;
+    [SerializeField] AudioClip m_GirlGiggle;
+
+    bool m_LightsOn = true;
 
     void Start()
     {
@@ -21,13 +23,27 @@ public class Script_LightManager : MonoBehaviour
             light.GetComponent<Light>().enabled = !light.GetComponent<Light>().enabled;
         }
         GetComponent<AudioSource>().PlayOneShot(m_FlipSwitch);
+        m_LightsOn = !m_LightsOn;
+
+        if (m_LightsOn)
+        {
+            StartCoroutine(SpookyLights());
+        }
     }
 
     IEnumerator StartGameLights()
     {
-        GetComponent<AudioSource>().PlayOneShot(m_PowerDown);
+        
         yield return new WaitForSeconds(3);
+        GetComponent<AudioSource>().PlayOneShot(m_GirlGiggle);
         ToggleLights();
         
+    }
+
+    IEnumerator SpookyLights()
+    {
+        yield return new WaitForSeconds(60 + Random.Range(30, 120));
+        GetComponent<AudioSource>().PlayOneShot(m_GirlGiggle);
+        ToggleLights();
     }
 }
