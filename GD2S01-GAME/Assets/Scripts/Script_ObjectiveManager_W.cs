@@ -19,6 +19,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
 
     [SerializeField] AudioClip m_TaskCompleted;
     private bool m_GrabText;
+
     private void Start()
     {
         m_GrabText = true;
@@ -35,6 +36,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         addTask("- Clean Up Cobwebs");
         addTask("- Clean Up Dishes");
         addTask("- Wash Clothes");
+        addTask("- Turn On Power");
     }
 
     private void Update()

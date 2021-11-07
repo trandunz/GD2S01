@@ -30,6 +30,7 @@ public class Script_Player_W : MonoBehaviour
 
 
     [SerializeField] AudioClip m_TaskCompleted;
+    [SerializeField] AudioClip m_PickedUpItem;
     private void Start()
     {
         m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
@@ -118,6 +119,7 @@ public class Script_Player_W : MonoBehaviour
                 {
                     m_CurrentlyHeldDishes++;
                     Destroy(InteractRay.transform.gameObject);
+                    GetComponent<AudioSource>().PlayOneShot(m_PickedUpItem);
                 }
                 if (InteractRay.transform.gameObject.tag is "WashingMachine")
                 {
@@ -127,6 +129,12 @@ public class Script_Player_W : MonoBehaviour
                 {
                     m_CurrentlyHeldClothes++;
                     Destroy(InteractRay.transform.gameObject);
+                    GetComponent<AudioSource>().PlayOneShot(m_PickedUpItem);
+                }
+                if (InteractRay.transform.gameObject.tag is "FuseBox")
+                {
+                    m_ObjectiveManager.removeTask("- Turn On Power");
+                    GameObject.FindGameObjectWithTag("LightManager").GetComponent<Script_LightManager>().ToggleLights();
                 }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Closet")))

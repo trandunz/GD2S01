@@ -82,6 +82,7 @@ public class Script_Tool : MonoBehaviour
                     }
                 case TOOLTYPE.TOURCH:
                     {
+                        GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
                         m_TourchOn = !m_TourchOn;
 
                         if (m_TourchOn)

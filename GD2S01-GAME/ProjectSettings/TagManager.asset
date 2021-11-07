@@ -24,6 +24,9 @@ TagManager:
   - AbeBulbs
   - Clothes
   - WashingMachine
+  - MansionLights
+  - FuseBox
+  - LightManager
   layers:
   - Default
   - TransparentFX

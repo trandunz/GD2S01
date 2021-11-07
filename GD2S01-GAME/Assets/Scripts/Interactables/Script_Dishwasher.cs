@@ -7,6 +7,7 @@ public class Script_Dishwasher : MonoBehaviour
     Script_ObjectiveManager_W m_ObjectiveManager;
 
     [SerializeField] GameObject[] m_Dishes;
+    [SerializeField] AudioClip m_DishNoise;
 
     void Start()
     {
@@ -18,6 +19,8 @@ public class Script_Dishwasher : MonoBehaviour
     }
     public void AddDish()
     {
+        GetComponent<AudioSource>().PlayOneShot(m_DishNoise);
+
         m_ObjectiveManager.m_DishNumber--;
 
         foreach (GameObject dish in m_Dishes)
