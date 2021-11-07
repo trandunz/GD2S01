@@ -42,7 +42,7 @@ public class Script_LightManager : MonoBehaviour
 
     IEnumerator SpookyLights()
     {
-        yield return new WaitForSeconds(60 + Random.Range(30, 120));
+        yield return new WaitForSeconds(30 + Random.Range(30, 60));
         GetComponent<AudioSource>().PlayOneShot(m_GirlGiggle);
         ToggleLights();
     }

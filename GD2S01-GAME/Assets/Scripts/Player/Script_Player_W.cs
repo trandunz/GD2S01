@@ -162,42 +162,49 @@ public class Script_Player_W : MonoBehaviour
     {
         if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, ~m_iLayerMaskIgnoreRay))
         {
-            if (InteractRay.collider.tag is "Door")
+            if (InteractRay.collider.tag is "Door" && !InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
             {
-                /*Debug.Log("Looking At Door");*/
-
-                if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
-                {
-                    m_InteractionText.text = "Press [" + "E" + "] To Open";
-                    var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                    InteractBackGroundColour.a = 1.0f;
-                    m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }
-                
+                m_InteractionText.text = "Press [" + "E" + "] To Open";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
             }
-            else if (InteractRay.collider.tag is "Window")
+            else if (InteractRay.collider.tag is "Window" && InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
             {
-                /*Debug.Log("Looking At Window");*/
-
-                /*if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
-                {
-                    m_InteractionText.text = "Press [" + "E" + "] To Open";
-                    var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                    InteractBackGroundColour.a = 1.0f;
-                    m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }*/
-                if(InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
-                {
-                    m_InteractionText.text = "Press [" + "E" + "] To Close";
-                    var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                    InteractBackGroundColour.a = 1.0f;
-                    m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
-                }
-
+                m_InteractionText.text = "Press [" + "E" + "] To Close";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
             }
-
+            else if (InteractRay.collider.tag is "Dish" || InteractRay.collider.tag is "Clothes")
+            {
+                m_InteractionText.text = "Press [" + "E" + "] To Pickup";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else if (InteractRay.collider.tag is "DishWasher" || InteractRay.collider.tag is "WashingMachine")
+            {
+                m_InteractionText.text = "Press [" + "E" + "] To Deposit";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else if (InteractRay.collider.tag is "FuseBox")
+            {
+                m_InteractionText.text = "Press [" + "E" + "] To Flip Switch";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else
+            {
+                m_InteractionText.text = null;
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 0.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
         }
-
         else
         {
             m_InteractionText.text = null;
@@ -205,6 +212,7 @@ public class Script_Player_W : MonoBehaviour
             InteractBackGroundColour.a = 0.0f;
             m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
         }
+
     }
 
     void AddStoredTool(GameObject theTool)
