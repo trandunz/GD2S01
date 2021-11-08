@@ -9,6 +9,7 @@ public class Script_LightManager : MonoBehaviour
     [SerializeField] AudioClip m_GirlGiggle;
 
     bool m_LightsOn = true;
+  
 
     void Start()
     {
@@ -16,11 +17,18 @@ public class Script_LightManager : MonoBehaviour
         StartCoroutine(StartGameLights());
     }
 
-    public void ToggleLights()
+    public void ToggleLights(bool _lightsOut = false)
     {
         foreach (GameObject light in m_Lights)
         {
-            light.GetComponent<Light>().enabled = !light.GetComponent<Light>().enabled;
+            if (_lightsOut)
+            {
+                light.GetComponent<Light>().enabled = false;
+            }
+            else
+            {
+                light.GetComponent<Light>().enabled = !light.GetComponent<Light>().enabled;
+            }
         }
         GetComponent<AudioSource>().PlayOneShot(m_FlipSwitch);
         m_LightsOn = !m_LightsOn;

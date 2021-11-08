@@ -9,6 +9,7 @@ public class Room_Swap_J : MonoBehaviour
     // The Number of Rooms in the Array
     [SerializeField] int m_iRoomCount;
 
+    bool m_isSwapped = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Room_Swap_J : MonoBehaviour
 
     public void RoomSwap()
     {
+        m_isSwapped = true;
         int iAvailavbletoSwap = 0;
         for (int i = 0; i < m_iRoomCount; i++)
         {

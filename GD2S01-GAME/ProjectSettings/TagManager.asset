@@ -27,6 +27,7 @@ TagManager:
   - MansionLights
   - FuseBox
   - LightManager
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX

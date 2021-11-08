@@ -282,11 +282,11 @@ public class Script_Tool : MonoBehaviour
                  m_Wipe.Play();
             }
 
-            //m_ObjectiveManager.m_CWNumber--;
-            //if (m_ObjectiveManager.m_CWNumber <= 0)
-            //{
-            //    m_ObjectiveManager.removeTask("- Windows");
-            //}
+            m_ObjectiveManager.m_DWNumber--;
+            if (m_ObjectiveManager.m_DWNumber <= 0)
+            {
+                m_ObjectiveManager.removeTask("- Clean The Windows");
+            }
         }
     }
 

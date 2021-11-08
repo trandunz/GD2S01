@@ -13,6 +13,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
     private GameObject[] m_DishObjectList;
     private GameObject[] m_ClothesObjectList;
     public int m_WNumber;
+    public int m_DWNumber;
     public int m_CWNumber;
     public int m_DishNumber;
     public int m_clothesNumber;
@@ -29,10 +30,18 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         m_ClothesObjectList = GameObject.FindGameObjectsWithTag("Clothes");
         m_CWNumber = m_CobwebObjectList.Length;
         m_WNumber = m_WindowObjectList.Length;
+        foreach (GameObject window in m_WindowObjectList)
+        {
+            if(window.GetComponentInChildren<WindowClean_B>().m_isClean == false)
+            {
+                m_DWNumber++;
+            }
+        }
         m_DishNumber = m_DishObjectList.Length;
         m_clothesNumber = m_ClothesObjectList.Length;
 
         addTask("- Close The Windows");
+        addTask("- Clean The Windows");
         addTask("- Clean Up Cobwebs");
         addTask("- Clean Up Dishes");
         addTask("- Wash Clothes");
@@ -89,6 +98,10 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             if (s == "- Close The Windows")
             {
                 _text.text = _text.text + s + "(" + m_WNumber + " Remaining)" + "\n";
+            }
+            else if (s == "- Clean The Windows")
+            {
+                _text.text = _text.text + s + "(" + m_DWNumber + " Remaining)" + "\n";
             }
             else if (s == "- Clean Up Cobwebs")
             {
