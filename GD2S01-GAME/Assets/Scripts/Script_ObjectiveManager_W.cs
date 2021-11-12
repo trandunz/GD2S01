@@ -79,7 +79,6 @@ public class Script_ObjectiveManager_W : MonoBehaviour
                 PlayTaskCompleted();
                 m_TaskList.Remove(newInput);
                 m_CompletedList.Add(newInput);
-                GameObject.FindGameObjectWithTag("TaskCompletedPopup").GetComponent<Animator>().SetTrigger("TaskCompleted");
                 break;
             }
         }
