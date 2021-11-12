@@ -31,7 +31,7 @@ public class Script_SpookyManager_B : MonoBehaviour
     //}
     IEnumerator StartGameSpooky()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(60);
         GameObject.FindGameObjectWithTag("MusicPlayer").GetComponent<Script_AudioManager_B>().StopMusic();
         m_RoomSwaps[Random.Range(0, m_RoomSwaps.Length - 1)].RoomSwap();
         GetComponent<AudioSource>().PlayOneShot(m_RoomMoveSound);

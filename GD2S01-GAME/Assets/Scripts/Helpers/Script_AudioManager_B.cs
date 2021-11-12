@@ -7,26 +7,57 @@ public class Script_AudioManager_B : MonoBehaviour
     public AudioSource[] m_Music;
 
     bool m_Switch = true;
-    bool m_CanPlay = true;
+   public bool m_CanPlay = true;
+   public bool m_MusicIsPlaying = false;
 
     void Start()
     {
         StartCoroutine(PlaySong());
     }
-    IEnumerator PlaySong()
+    public IEnumerator PlaySong()
     {
-        yield return new WaitForSeconds(20);
-        if (m_Switch && !m_Music[0].isPlaying && m_CanPlay == true)
+        if (!(m_Music[1].isPlaying) && m_CanPlay)
         {
-            m_Music[0].Play();
-            m_Switch = !m_Switch;
-        }
-
-        if (!m_Switch && !m_Music[1].isPlaying && m_CanPlay == true)
-        {
+            yield return new WaitForSeconds(10);
             m_Music[1].Play();
-            m_Switch = !m_Switch;
         }
+        //// m_MusicIsPlaying = true;
+
+        // if (m_Music[0].isPlaying)
+        // {
+        //     m_MusicIsPlaying = true;
+        // }
+
+        //foreach (AudioSource source in m_Music)
+        //{
+        //    if (source.isPlaying)
+        //    {
+        //        m_MusicIsPlaying = true;
+        //    }
+        //}
+        //foreach (AudioSource source in m_Music)
+        //{
+        //    if (!(source.isPlaying))
+        //    {
+        //        m_MusicIsPlaying = false;
+        //    }
+
+        //}
+
+
+        //if ((m_Switch) && (!(m_Music[0].isPlaying)) && (m_CanPlay) && (!m_MusicIsPlaying))
+        //{
+        //    yield return new WaitForSeconds(1);
+        //    //m_Music[0].Play();
+        //    //m_Switch = !m_Switch;
+        //}
+
+        //if (!(m_Switch) && (!(m_Music[0].isPlaying)) && (m_CanPlay) && (!m_MusicIsPlaying))
+        //{
+        //    yield return new WaitForSeconds(1);
+        //    m_Music[1].Play();
+        //    //m_Switch = !m_Switch;
+        //}
     }
 
     public void StopMusic()
@@ -42,5 +73,6 @@ public class Script_AudioManager_B : MonoBehaviour
     public void CanPlay()
     {
         m_CanPlay = true;
+        PlaySong();
     }
 }
