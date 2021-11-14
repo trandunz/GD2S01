@@ -21,14 +21,6 @@ public class Script_SpookyManager_B : MonoBehaviour
         StartCoroutine(StartGameSpooky());
     }
 
-    //public void ToggleSpookyEvent()
-    //{
-    //    GameObject.FindGameObjectWithTag("MusicPlayer").GetComponent<Script_AudioManager_B>().StopMusic();
-    //    GetComponent<Room_Swap_J>().RoomSwap();
-    //    GetComponent<AudioSource>().PlayOneShot(m_RoomMoveSound);
-    //    GetComponent<AudioSource>().PlayOneShot(m_TensionMusic);
-    //    GameObject.FindGameObjectWithTag("LightManager").GetComponent<Script_LightManager>().ToggleLights(true);
-    //}
     IEnumerator StartGameSpooky()
     {
         yield return new WaitForSeconds(60);
