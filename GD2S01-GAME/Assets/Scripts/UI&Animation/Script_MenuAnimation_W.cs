@@ -12,6 +12,7 @@ public class Script_MenuAnimation_W : MonoBehaviour
     private enum SCENES
     {
         MAIN,
+        TUTORIAL,
         WILL,
         JOSH,
         BEN,
@@ -110,6 +111,11 @@ public class Script_MenuAnimation_W : MonoBehaviour
             case SCENES.MAIN:
                 {
                     SceneManager.LoadScene("MainGame");
+                    break;
+                }
+            case SCENES.TUTORIAL:
+                {
+                    SceneManager.LoadScene("Tutorial");
                     break;
                 }
             case SCENES.RICHPOINTSTEST:

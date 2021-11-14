@@ -21,7 +21,7 @@ public class WindowClean_B : MonoBehaviour
     }
     public bool CleanWindow()
     {
-        if (m_isWet)
+        if (m_isWet && !m_isClean)
         {
             m_Window.GetComponent<MeshRenderer>().material = m_CleanMaterial;
             m_isClean = true;

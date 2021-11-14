@@ -31,6 +31,8 @@ public class Script_Player_W : MonoBehaviour
 
     [SerializeField] AudioClip m_TaskCompleted;
     [SerializeField] AudioClip m_PickedUpItem;
+    [SerializeField] AudioClip m_PickedUpClothing;
+
     private void Start()
     {
         m_ObjectiveManager = GameObject.Find("ObjectiveManager").GetComponent<Script_ObjectiveManager_W>();
@@ -129,7 +131,7 @@ public class Script_Player_W : MonoBehaviour
                 {
                     m_CurrentlyHeldClothes++;
                     Destroy(InteractRay.transform.gameObject);
-                    GetComponent<AudioSource>().PlayOneShot(m_PickedUpItem);
+                    GetComponent<AudioSource>().PlayOneShot(m_PickedUpClothing);
                 }
                 if (InteractRay.transform.gameObject.tag is "FuseBox")
                 {

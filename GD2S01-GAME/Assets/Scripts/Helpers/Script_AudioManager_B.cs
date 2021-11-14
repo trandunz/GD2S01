@@ -20,6 +20,8 @@ public class Script_AudioManager_B : MonoBehaviour
         {
             yield return new WaitForSeconds(10);
             m_Music[1].Play();
+            yield return new WaitForSeconds(30);
+            CanPlay();
         }
         //// m_MusicIsPlaying = true;
 

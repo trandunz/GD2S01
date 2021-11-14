@@ -277,13 +277,17 @@ public class Script_Tool : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
         {
-            if(hit.transform.GetComponentInParent<WindowClean_B>().CleanWindow())
+            if (!(hit.transform.GetComponentInParent<WindowClean_B>().m_isClean))
+            {
+                m_ObjectiveManager.m_DWNumber--;
+            }
+
+            if (hit.transform.GetComponentInParent<WindowClean_B>().CleanWindow())
             {
                  m_Wipe.Play();
             }
 
-            m_ObjectiveManager.m_DWNumber--;
-            if (m_ObjectiveManager.m_DWNumber <= 0)
+            if (m_ObjectiveManager.m_DWNumber <= 0) 
             {
                 m_ObjectiveManager.removeTask("- Clean The Windows");
             }

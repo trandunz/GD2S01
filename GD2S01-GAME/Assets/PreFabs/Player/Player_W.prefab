@@ -3015,6 +3015,7 @@ MonoBehaviour:
   activeItemIndex: 0
   m_TaskCompleted: {fileID: 8300000, guid: 5a82cd23981682641859a6ad40d5143a, type: 3}
   m_PickedUpItem: {fileID: 8300000, guid: c16e141be7d9a404991ac96351960716, type: 3}
+  m_PickedUpClothing: {fileID: 8300000, guid: 7a6530559e3db174a86b7b3557e2fd5a, type: 3}
 --- !u!143 &5894245490649207818
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3051,6 +3052,7 @@ MonoBehaviour:
   activeItemIndex: 0
   m_TaskCompleted: {fileID: 0}
   m_PickedUpItem: {fileID: 0}
+  m_PickedUpClothing: {fileID: 0}
   m_Controller: {fileID: 5894245490649207818}
   m_Look: {fileID: 7159195842833923814}
   m_Body: {fileID: 61673309355836485}
@@ -3096,9 +3098,9 @@ MonoBehaviour:
   m_fDistanceTravelled: 0
   m_FeetPosition: {fileID: 872135223823134159}
   m_FootstepSounds:
-  - {fileID: 7931522877697906323, guid: c58411b39dc778d42aeb9a213a529fa0, type: 3}
-  - {fileID: 7931522877697906323, guid: 416d22663701a0e4dbdb106715aa9425, type: 3}
-  - {fileID: 7931522877697906323, guid: f7d5c6ddaffa8174594d5ebed302af71, type: 3}
+  - {fileID: 1311131659285868452, guid: 8833bd126fbe9fe468a33a17c560828a, type: 3}
+  - {fileID: 4203916427238664951, guid: 9c93a49abb7ecff438ca28024bd0a755, type: 3}
+  - {fileID: 5241235443301504874, guid: 88c96931d14d9694ba62f01538e04ee3, type: 3}
   m_FootstepLength: 2
   m_JumpFootstepTimer: 0
   m_JumpFootstepCooldown: 0.5
