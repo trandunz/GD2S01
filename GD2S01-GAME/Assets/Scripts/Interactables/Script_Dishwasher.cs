@@ -19,8 +19,9 @@ public class Script_Dishwasher : MonoBehaviour
     }
     public void AddDish()
     {
-        GetComponent<AudioSource>().PlayOneShot(m_DishNoise);
 
+        GetComponent<AudioSource>().PlayOneShot(m_DishNoise);
+        
         m_ObjectiveManager.m_DishNumber--;
 
         foreach (GameObject dish in m_Dishes)

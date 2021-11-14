@@ -199,6 +199,20 @@ public class Script_Player_W : MonoBehaviour
                 InteractBackGroundColour.a = 1.0f;
                 m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
             }
+            else if (InteractRay.collider.tag is "Window" && !(InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isClean) && !(InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isWet)) 
+            {
+                m_InteractionText.text = "Spray window [" + "Left-Click" + "] with window cleaning tool.";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
+            else if (InteractRay.collider.tag is "Window" && (InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isWet))
+            {
+                m_InteractionText.text = "Wipe window [" + "Right-Click" + "] with window cleaning tool.";
+                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                InteractBackGroundColour.a = 1.0f;
+                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+            }
             else
             {
                 m_InteractionText.text = null;
