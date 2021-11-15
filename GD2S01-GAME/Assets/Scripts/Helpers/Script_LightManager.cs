@@ -42,7 +42,7 @@ public class Script_LightManager : MonoBehaviour
     IEnumerator StartGameLights()
     {
         
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         GetComponent<AudioSource>().PlayOneShot(m_GirlGiggle);
         ToggleLights();
         
