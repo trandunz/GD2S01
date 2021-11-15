@@ -166,8 +166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 103880682712187362}
   - component: {fileID: 6309862188603939736}
-  - component: {fileID: 503197627430774961}
-  - component: {fileID: 8511952728775907857}
+  - component: {fileID: 1580630516582916057}
+  - component: {fileID: 2104616370}
   m_Layer: 0
   m_Name: Exorcist
   m_TagString: Untagged
@@ -182,7 +182,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737145866806467416}
-  m_LocalRotation: {x: -0, y: -0.97307765, z: -0, w: 0.23047754}
+  m_LocalRotation: {x: 0, y: -0.97307837, z: 0, w: 0.23047443}
   m_LocalPosition: {x: 31.568974, y: 0.011997987, z: 13.506685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -210,7 +210,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &503197627430774961
+--- !u!114 &1580630516582916057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,31 +219,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 737145866806467416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef236f96c0f31ea4db01740076a15fa7, type: 3}
+  m_Script: {fileID: 11500000, guid: bf32255bf9a251c418b5233132d3e40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!195 &8511952728775907857
-NavMeshAgent:
+  m_bMove: 0
+  m_MoveSpeed: 2
+  m_MoveTime: 5
+--- !u!143 &2104616370
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737145866806467416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.1
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
-  m_AutoRepath: 1
-  m_Height: 1.8
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1241809839980631682
 GameObject:
   m_ObjectHideFlags: 0
