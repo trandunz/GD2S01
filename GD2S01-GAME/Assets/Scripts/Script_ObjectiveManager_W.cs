@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class Script_ObjectiveManager_W : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Script_ObjectiveManager_W : MonoBehaviour
 
     [SerializeField] AudioClip m_TaskCompleted;
     private bool m_GrabText;
+
+    public bool m_bTutorial = false;
 
     private void Start()
     {
@@ -62,6 +65,12 @@ public class Script_ObjectiveManager_W : MonoBehaviour
 
         UpdateText(m_TaskListText, m_TaskList);
         UpdateText(m_CompletedListText, m_CompletedList);
+
+        if (m_TaskList.Count <= 0)
+        {
+            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
+            SceneManager.LoadScene(sceneName:"MainGame");
+        }
     }
 
     public void addTask(string newInput)
@@ -78,11 +87,12 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             {
                 Debug.Log("Completed (" + newInput + ")");
                 PlayTaskCompleted();
-                m_TaskList.Remove(newInput);
-                m_CompletedList.Add(newInput);
                 GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponent<Animator>().SetTrigger("TaskComplete");
                 GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(newInput);
                 GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().fontStyle = FontStyles.Strikethrough;
+                m_TaskList.Remove(newInput);
+                m_CompletedList.Add(newInput);
+                
                 break;
             }
         }
