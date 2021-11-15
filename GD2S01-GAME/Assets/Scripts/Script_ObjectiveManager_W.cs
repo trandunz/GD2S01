@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 public class Script_ObjectiveManager_W : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI m_TaskListText;
@@ -79,6 +80,9 @@ public class Script_ObjectiveManager_W : MonoBehaviour
                 PlayTaskCompleted();
                 m_TaskList.Remove(newInput);
                 m_CompletedList.Add(newInput);
+                GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponent<Animator>().SetTrigger("TaskComplete");
+                GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(newInput);
+                GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().fontStyle = FontStyles.Strikethrough;
                 break;
             }
         }

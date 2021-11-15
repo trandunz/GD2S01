@@ -28,6 +28,7 @@ TagManager:
   - FuseBox
   - LightManager
   - MusicPlayer
+  - TaskCompletedUI
   layers:
   - Default
   - TransparentFX

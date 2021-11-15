@@ -20,6 +20,7 @@ public class Script_UIScripts : MonoBehaviour
 
     public GameObject m_OptionsMenu;
     public GameObject m_Inventory;
+    public GameObject m_TaskCompletedUI;
     
     // Start is called before the first frame update
     void Start()
