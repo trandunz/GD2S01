@@ -1401,7 +1401,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 27786
+    surfaceParameter: 30504
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 5696545000623401536
@@ -6110,7 +6110,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 29450
+    surfaceParameter: 15828
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 9106448858277438477
@@ -6306,7 +6306,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 29730
+    surfaceParameter: 17604
     meshQueryIndex: 10
     subMeshQueryIndex: 0
     geometryHashValue: -7332990028290331221
@@ -7098,7 +7098,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 29466
+    surfaceParameter: 15860
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: 3746831980455234953
@@ -12491,26 +12491,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4116388339532346161, guid: 63d7e96a097524a428b51b6feaa13c1c,
-        type: 3}
-      propertyPath: m_Name
-      value: '[generated-render-mesh]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116388339532346161, guid: 63d7e96a097524a428b51b6feaa13c1c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4116388339532346161, guid: 63d7e96a097524a428b51b6feaa13c1c,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 6510801874801704206, guid: 63d7e96a097524a428b51b6feaa13c1c,
-        type: 3}
-      propertyPath: Shape.TexGens.Array.data[4].RenderMaterial
+    - target: {fileID: 1764192902, guid: 63d7e96a097524a428b51b6feaa13c1c, type: 3}
+      propertyPath: SharedMesh
       value: 
-      objectReference: {fileID: 2100000, guid: 2586f239c33d7484881cf7946a2a2221, type: 2}
+      objectReference: {fileID: 880030026}
+    - target: {fileID: 1764192903, guid: 63d7e96a097524a428b51b6feaa13c1c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 880030026}
     - target: {fileID: 8673702069086027010, guid: 63d7e96a097524a428b51b6feaa13c1c,
         type: 3}
       propertyPath: m_Mesh
@@ -12581,99 +12569,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8673702069942701319, guid: 63d7e96a097524a428b51b6feaa13c1c,
-        type: 3}
-      propertyPath: ControlMesh.Generation
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3460250431751754085, guid: 63d7e96a097524a428b51b6feaa13c1c, type: 3}
-    - {fileID: 2293793064990659555, guid: 63d7e96a097524a428b51b6feaa13c1c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d7e96a097524a428b51b6feaa13c1c, type: 3}
---- !u!1 &1764192900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4116388339532346161, guid: 63d7e96a097524a428b51b6feaa13c1c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1764192899}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1764192901
-MeshRenderer:
-  m_ObjectHideFlags: 16
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764192900}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 2586f239c33d7484881cf7946a2a2221, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!114 &1764192902
-MonoBehaviour:
-  m_ObjectHideFlags: 16
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764192900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a92adfdc6e3524fb82e0817c421ae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Version: 1
-  SharedMesh: {fileID: 880030026}
-  RenderMaterial: {fileID: 2100000, guid: 2586f239c33d7484881cf7946a2a2221, type: 2}
-  PhysicsMaterial: {fileID: 0}
-  RenderSurfaceType: 0
-  MeshDescription:
-    meshQuery:
-      layers: 16777223
-      maskAndChannels: 234881031
-    surfaceParameter: 29450
-    meshQueryIndex: 5
-    subMeshQueryIndex: 0
-    geometryHashValue: -5710000554899928934
-    surfaceHashValue: -8632949095676195889
-    vertexCount: 4
-    indexCount: 6
-  HasGeneratedNormals: 0
-  HasUV2: 1
-  LightingHashValue: -5710000554899928934
---- !u!33 &1764192903
-MeshFilter:
-  m_ObjectHideFlags: 16
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764192900}
-  m_Mesh: {fileID: 880030026}
 --- !u!43 &1766772461
 Mesh:
   m_ObjectHideFlags: 0
@@ -14782,7 +14679,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 29734
+    surfaceParameter: 30726
     meshQueryIndex: 2
     subMeshQueryIndex: 0
     geometryHashValue: 6900284000430706612

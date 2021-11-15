@@ -44,17 +44,17 @@ public class Script_Player_W : MonoBehaviour
         }
         storedItems[activeItemIndex].SetActive(true); //set the currently held item to be active
         m_bOnStart = true;
+
     }
 
     private void Awake()
     {
-        
     }
     void Update()
     {
         if (m_bOnStart)
         {
-            m_InteractionText = GameObject.Find("InteractionText").GetComponent<TMPro.TextMeshProUGUI>();
+            m_InteractionText = GameObject.Find("InteractionText").GetComponentInChildren<TMPro.TextMeshProUGUI>();
             m_bOnStart = false;
         }
         
@@ -117,23 +117,23 @@ public class Script_Player_W : MonoBehaviour
                 {
                     HandleDishWasher();
                 }
-                if (InteractRay.transform.gameObject.tag is "Dish")
+                else if (InteractRay.transform.gameObject.tag is "Dish")
                 {
                     m_CurrentlyHeldDishes++;
                     Destroy(InteractRay.transform.gameObject);
                     GetComponent<AudioSource>().PlayOneShot(m_PickedUpItem);
                 }
-                if (InteractRay.transform.gameObject.tag is "WashingMachine")
+                else if (InteractRay.transform.gameObject.tag is "WashingMachine")
                 {
                     HandleWashingMachine();
                 }
-                if (InteractRay.transform.gameObject.tag is "Clothes")
+                else if (InteractRay.transform.gameObject.tag is "Clothes")
                 {
                     m_CurrentlyHeldClothes++;
                     Destroy(InteractRay.transform.gameObject);
                     GetComponent<AudioSource>().PlayOneShot(m_PickedUpClothing);
                 }
-                if (InteractRay.transform.gameObject.tag is "FuseBox")
+                else if (InteractRay.transform.gameObject.tag is "FuseBox")
                 {
                     m_ObjectiveManager.removeTask("- Turn On Power");
                     GameObject.FindGameObjectWithTag("LightManager").GetComponent<Script_LightManager>().ToggleLights();

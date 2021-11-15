@@ -23,7 +23,7 @@ public class Script_Door_W : MonoBehaviour
 
     void Start()
     {
-        m_bOpen = false;
+        //m_bOpen = false;
     }
 
     private void Update()

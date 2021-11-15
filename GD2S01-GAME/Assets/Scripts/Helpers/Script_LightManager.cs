@@ -13,6 +13,11 @@ public class Script_LightManager : MonoBehaviour
 
     void Start()
     {
+        
+    }
+
+    private void Awake()
+    {
         m_Lights = GameObject.FindGameObjectsWithTag("MansionLights");
         StartCoroutine(StartGameLights());
     }

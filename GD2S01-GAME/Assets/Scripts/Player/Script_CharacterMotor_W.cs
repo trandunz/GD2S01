@@ -40,13 +40,11 @@ public class Script_CharacterMotor_W : Script_Player_W
 
     void Start()
     {
-        m_OptionsCanvas = GameObject.Instantiate(GameObject.Find("Canvas"));
-
-        Destroy(GameObject.Find("Canvas"));
-        m_OptionsCanvas.name = "Canvas";
+        m_OptionsCanvas = GameObject.FindGameObjectWithTag("Canvas");
         m_MoveSpeed = m_fMaxMoveSpeed;
         m_Look.m_bIsFree = false;
         m_bCanMove = false;
+        m_OptionsCanvas.GetComponentInParent<Script_UIScripts>().SetAllActive();
     }
 
     private void SpawnFootstep()

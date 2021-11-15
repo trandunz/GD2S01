@@ -41,9 +41,6 @@ public class Script_AnimatorEvents : MonoBehaviour
         GetComponentInParent<Script_Door_W>().m_bOpen = true;
         GetComponent<AudioSource>().clip = (DoorClips[0]);
         GetComponent<AudioSource>().Play();
-
-
-        GetComponent<AudioSource>().PlayOneShot(DoorClips[2]);
         
     }
 
