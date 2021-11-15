@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7126398666666242798}
   - component: {fileID: 7126398666666242799}
+  - component: {fileID: -6529992144789434255}
   m_Layer: 10
   m_Name: CobwebFlat
   m_TagString: Cobweb
@@ -234,3 +235,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8, z: 0.02}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6529992144789434255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126398666666242797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fddc25084e08e439ef9a3b8d099a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightToSpawn: {fileID: 110134194065317145, guid: 243814ee5780a934c949796febd84111,
+    type: 3}
+  numTillSpawn: 20

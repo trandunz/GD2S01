@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 2041148766734211586}
   - component: {fileID: 68257913210759995}
   - component: {fileID: 6824564712361087980}
+  - component: {fileID: 2086328799159221002}
   m_Layer: 10
   m_Name: Clothes 1
   m_TagString: Clothes
@@ -414,6 +415,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2086328799159221002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052355949252562595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fddc25084e08e439ef9a3b8d099a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightToSpawn: {fileID: 110134194065317145, guid: 243814ee5780a934c949796febd84111,
+    type: 3}
+  numTillSpawn: 8
 --- !u!1 &1239374404194850705
 GameObject:
   m_ObjectHideFlags: 0
