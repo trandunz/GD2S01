@@ -24,6 +24,20 @@ public class Script_ObjectiveManager_W : MonoBehaviour
     private bool m_GrabText;
 
     public bool m_bTutorial = false;
+    [SerializeField] Script_Door_W m_BasementDoor;
+
+    [SerializeField] bool m_bDebugBasement = false;
+
+    private float m_BlackingOut = 60.0f;
+
+
+    private void Awake()
+    {
+        if (m_bTutorial)
+        {
+            StartCoroutine(TutorialMouseWheel());
+        }
+    }
 
     private void Start()
     {
@@ -66,10 +80,27 @@ public class Script_ObjectiveManager_W : MonoBehaviour
         UpdateText(m_TaskListText, m_TaskList);
         UpdateText(m_CompletedListText, m_CompletedList);
 
-        if (m_TaskList.Count <= 0)
+        
+        if (m_TaskList.Count <= 0 || m_bDebugBasement)
         {
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
-            SceneManager.LoadScene(sceneName:"MainGame");
+            m_bDebugBasement = false;
+
+            if (m_bTutorial)
+            {
+                m_BlackingOut += 0.04f;
+                // fade character view to red                
+                GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>().fieldOfView = m_BlackingOut;
+                StartCoroutine(SwitchToMain());
+            }
+            else
+            {
+                //basement shit
+                m_BasementDoor.GetComponentInChildren<Animator>().SetBool("Open", true); // "Open" -> "Open90"
+                GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponent<Animator>().SetTrigger("TaskComplete");
+                GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText("- Clean Basement...");
+                GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().fontStyle = FontStyles.Bold;
+                addTask("- Clean Basement...");
+            }
         }
     }
 
@@ -135,5 +166,21 @@ public class Script_ObjectiveManager_W : MonoBehaviour
             }
         }
 
+    }
+
+    IEnumerator TutorialMouseWheel()
+    {
+        yield return new WaitForSeconds(10);
+        GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponent<Animator>().speed = 0.5f;
+        GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponent<Animator>().SetTrigger("TaskComplete");
+        GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText("Use Mouse Wheel to change tools.");
+        GameObject.FindGameObjectWithTag("TaskCompletedUI").GetComponentInChildren<TMPro.TextMeshProUGUI>().fontStyle = FontStyles.Bold;
+    }
+
+    IEnumerator SwitchToMain()
+    {
+        yield return new WaitForSeconds(6);
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
+        SceneManager.LoadScene(sceneName: "MainGame");
     }
 }
