@@ -10,16 +10,17 @@ public class Script_BUIExitB_W : MonoBehaviour
     {
         if (GetComponentInParent<Script_UIScripts>().m_bIsInGame)
         {
-            GetComponentInParent<Script_UIScripts>().m_bIsInGame = false;
+            GetComponentInParent<Script_UIScripts>().SetGameInactive();
             SceneManager.LoadScene("MainMenu_W");
         }
     }
 
     public void QuitGame()
     {
-        if (GetComponentInParent<Script_UIScripts>().m_bIsInGame)
+        if (!GetComponentInParent<Script_UIScripts>().m_bIsInGame)
         {
-            Application.Quit();
+            GameObject.FindObjectOfType<Script_MenuAnimation_W>().PlayExitAnim();
+            GetComponentInParent<Script_UIScripts>().SetAllInactiveInventory();
         }
     }
 }

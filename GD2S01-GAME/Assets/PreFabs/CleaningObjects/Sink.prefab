@@ -738,6 +738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &6920886330533142950 stripped
@@ -818,6 +823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -900,6 +910,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &7306855574780096395 stripped
@@ -980,6 +995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -1062,6 +1082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!4 &3687535578965061719 stripped
@@ -1142,6 +1167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -1224,6 +1254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!4 &3136275761711207918 stripped
@@ -1304,6 +1339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -1386,6 +1426,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &5434085196372582918 stripped
@@ -1466,6 +1511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -1548,6 +1598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!4 &640284881166358946 stripped
@@ -1628,6 +1683,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -1710,6 +1770,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!4 &8166603914273930310 stripped
@@ -1790,6 +1855,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -1872,6 +1942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &3895568724735149144 stripped
@@ -1952,6 +2027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -2034,6 +2114,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &4305520864102514704 stripped
@@ -2114,6 +2199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -2196,6 +2286,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &1385640772707939212 stripped
@@ -2276,6 +2371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
@@ -2358,6 +2458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}
 --- !u!1 &2284576204379857567 stripped
@@ -2438,6 +2543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Plate (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071213164100116799, guid: 1ee67e94526ef014ca58d2b171a811f3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee67e94526ef014ca58d2b171a811f3, type: 3}

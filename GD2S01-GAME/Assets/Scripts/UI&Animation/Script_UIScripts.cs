@@ -21,11 +21,12 @@ public class Script_UIScripts : MonoBehaviour
     public GameObject m_OptionsMenu;
     public GameObject m_Inventory;
     public GameObject m_TaskCompletedUI;
-    
+    public GameObject m_InteractText;
+
     // Start is called before the first frame update
     void Start()
     {
-        SetAllActive();
+        SetGameInactive();
         m_Audio.value = AudioListener.volume;
         m_Audio.value = AudioListener.volume;
         apply.interactable = false;
@@ -35,18 +36,55 @@ public class Script_UIScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void SetAllActive()
     {
-        /*Startb.gameObject.SetActive(!Startb.gameObject.activeSelf);
-        Continue.gameObject.SetActive(!Continue.gameObject.activeSelf);*/
-        Options.gameObject.SetActive(!Options.gameObject.activeSelf);
-        Exit.gameObject.SetActive(!Exit.gameObject.activeSelf);
-        Title.gameObject.SetActive(!Title.gameObject.activeSelf);
-        m_Inventory.gameObject.SetActive(!m_Inventory.activeSelf);
+        Startb.gameObject.SetActive(false);
+        Continue.gameObject.SetActive(false);
+        Options.gameObject.SetActive(true);
+        Exit.gameObject.SetActive(true);
+        Title.gameObject.SetActive(true);
+        m_Inventory.gameObject.SetActive(true);
         m_OptionsMenu.gameObject.SetActive(false);
+        m_InteractText.SetActive(true);
+        m_bIsInGame = true;
+    }
+
+    public void ToggleInGameUID()
+    {
+        Startb.gameObject.SetActive(false);
+        Continue.gameObject.SetActive(false);
+        Options.gameObject.SetActive(!m_Inventory.gameObject.activeSelf);
+        Exit.gameObject.SetActive(!m_Inventory.gameObject.activeSelf);
+        Title.gameObject.SetActive(!m_Inventory.gameObject.activeSelf);
+        m_Inventory.gameObject.SetActive(!m_Inventory.gameObject.activeSelf);
+        m_OptionsMenu.gameObject.SetActive(false);
+    }
+
+    public void SetGameInactive()
+    {
+        Startb.gameObject.SetActive(true);
+        Continue.gameObject.SetActive(true);
+        Options.gameObject.SetActive(true);
+        Exit.gameObject.SetActive(true);
+        Title.gameObject.SetActive(true);
+        m_Inventory.gameObject.SetActive(false);
+        m_OptionsMenu.gameObject.SetActive(false);
+        m_InteractText.SetActive(false);
+        m_bIsInGame = false;
+    }
+
+    public void SetAllInactiveInventory()
+    {
+        Startb.gameObject.SetActive(false);
+        Continue.gameObject.SetActive(false);
+        Options.gameObject.SetActive(false);
+        Exit.gameObject.SetActive(false);
+        Title.gameObject.SetActive(false);
+        m_Inventory.gameObject.SetActive(false);
+        m_OptionsMenu.gameObject.SetActive(false);
+        m_InteractText.SetActive(false);
     }
 
     public void SetInteractable(bool _truth)

@@ -71,12 +71,15 @@ public class Script_Player_W : MonoBehaviour
         {
             if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Doors")))
             {
-                if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
+                if (InteractRay.transform.GetComponentInParent<Script_Door_W>())
                 {
-                    
-                    Debug.Log("Open Door");
-                    InteractRay.transform.GetComponentInParent<Script_Door_W>().OpenDoor(InteractRay);
-                    /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
+                    if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
+                    {
+
+                        Debug.Log("Open Door");
+                        InteractRay.transform.GetComponentInParent<Script_Door_W>().OpenDoor(InteractRay);
+                        /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
+                    }
                 }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 3.0f, LayerMask.GetMask("Windows")))
@@ -164,12 +167,18 @@ public class Script_Player_W : MonoBehaviour
     {
         if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, ~m_iLayerMaskIgnoreRay))
         {
-            if (InteractRay.collider.tag is "Door" && !InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
+            if (InteractRay.collider.tag is "Door")
             {
-                m_InteractionText.text = "Press [" + "E" + "] To Open";
-                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                InteractBackGroundColour.a = 1.0f;
-                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+                if (InteractRay.transform.GetComponentInParent<Script_Door_W>())
+                {
+                    if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
+                    {
+                        m_InteractionText.text = "Press [" + "E" + "] To Open";
+                        var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                        InteractBackGroundColour.a = 1.0f;
+                        m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+                    }
+                }
             }
             else if (InteractRay.collider.tag is "Window" && InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
             {
@@ -199,12 +208,18 @@ public class Script_Player_W : MonoBehaviour
                 InteractBackGroundColour.a = 1.0f;
                 m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
             }
-            else if (InteractRay.collider.tag is "Window" && !(InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isClean) && !(InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isWet)) 
+            else if (InteractRay.collider.tag is "Window") 
             {
-                m_InteractionText.text = "Spray window [" + "Left-Click" + "] with window cleaning tool.";
-                var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
-                InteractBackGroundColour.a = 1.0f;
-                m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+                if (InteractRay.transform.GetComponentInParent<WindowClean_B>())
+                {
+                    if(!(InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isClean) && !(InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isWet))
+                    {
+                        m_InteractionText.text = "Spray window [" + "Left-Click" + "] with window cleaning tool.";
+                        var InteractBackGroundColour = m_InteractionText.transform.parent.GetComponent<Image>().color;
+                        InteractBackGroundColour.a = 1.0f;
+                        m_InteractionText.transform.parent.GetComponent<Image>().color = InteractBackGroundColour;
+                    }
+                }
             }
             else if (InteractRay.collider.tag is "Window" && (InteractRay.transform.GetComponentInParent<WindowClean_B>().m_isWet))
             {

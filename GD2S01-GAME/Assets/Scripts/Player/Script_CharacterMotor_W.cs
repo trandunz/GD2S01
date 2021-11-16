@@ -87,7 +87,7 @@ public class Script_CharacterMotor_W : Script_Player_W
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            m_OptionsCanvas.GetComponentInParent<Script_UIScripts>().SetAllActive();
+            m_OptionsCanvas.GetComponentInParent<Script_UIScripts>().ToggleInGameUID();
             m_Look.m_bIsFree = !m_Look.m_bIsFree;
             m_bCanMove = !m_bCanMove;
         }

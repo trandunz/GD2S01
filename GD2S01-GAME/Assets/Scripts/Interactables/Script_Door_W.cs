@@ -21,6 +21,9 @@ public class Script_Door_W : MonoBehaviour
 
     private float m_PrevCastNormZ;
 
+    [SerializeField] bool m_IsSpooky = false;
+    [SerializeField] Script_Enemy m_Enemy;
+
     void Start()
     {
         //m_bOpen = false;
@@ -98,14 +101,17 @@ public class Script_Door_W : MonoBehaviour
             }
             m_PrevCastNormZ = 0.0f;
         }
-            
-        
     }
 
     public void OpenDoor(RaycastHit RayCast)
     {
         if (!m_bOpen && !m_isLocked)
         {
+            if (m_IsSpooky)
+            {
+                // ghosts
+                m_Enemy.m_bMove = true;
+            }
             m_PrevCastNormZ = RayCast.normal.z;
             if (RayCast.normal.z > 0.0f)
             {

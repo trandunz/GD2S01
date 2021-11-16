@@ -1437,7 +1437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START NEW GAME
+  m_Text: TUTORIAL
 --- !u!222 &268536916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3560,8 +3560,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 759087540}
-        m_MethodName: StartNewGame
+      - m_Target: {fileID: 789819719}
+        m_MethodName: SkipTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4223,8 +4223,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 789819719}
-        m_MethodName: PlayExitAnim
+      - m_Target: {fileID: 785725208}
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4644,6 +4644,7 @@ MonoBehaviour:
   m_OptionsMenu: {fileID: 894703275}
   m_Inventory: {fileID: 1297809819}
   m_TaskCompletedUI: {fileID: 1491370073}
+  m_InteractText: {fileID: 2070007440}
 --- !u!1 &833618876
 GameObject:
   m_ObjectHideFlags: 0
@@ -12859,7 +12860,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CONTINUE
+  m_Text: START NEW GAME
 --- !u!222 &2084114988
 CanvasRenderer:
   m_ObjectHideFlags: 0

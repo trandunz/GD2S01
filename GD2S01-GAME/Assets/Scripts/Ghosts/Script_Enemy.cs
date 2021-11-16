@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Script_Enemy : MonoBehaviour
 {
-    [SerializeField] bool m_bMove = false;
+    public bool m_bMove = false;
     [SerializeField] float m_MoveSpeed = 5.0f;
     [SerializeField] float m_MoveTime = 5.0f;
     float m_MoveClock;

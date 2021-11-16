@@ -81,15 +81,18 @@ public class Script_MenuAnimation_W : MonoBehaviour
         Application.Quit(); 
     }
 
+    public void SkipTutorial()
+    {
+        m_Scene = SCENES.MAIN;
+    }
+
     public void LoadNextScene()
     {
         m_OptionsMenu.gameObject.SetActive(true);
-        m_OptionsMenu.GetComponentInParent<Script_UIScripts>().m_bIsInGame = true;
         m_OptionsMenu.gameObject.SetActive(false);
-        DontDestroyOnLoad(m_Canvas);
         m_InteractionText.SetActive(true);
+        DontDestroyOnLoad(m_Canvas);
 
-        
         // REQUIRES PLAYER_W TO FUNCTION ON FIRST LAUNCH, PLAY THE GAME FROM MAIN SCREEN, SET THE ENUM TO DESIRED VALUE.
         switch (m_Scene)
         {
