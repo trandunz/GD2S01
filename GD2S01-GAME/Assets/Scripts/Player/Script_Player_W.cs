@@ -71,22 +71,18 @@ public class Script_Player_W : MonoBehaviour
         {
             if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Doors")))
             {
-                if (InteractRay.transform.GetComponentInParent<Script_Door_W>())
+                if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
                 {
-                    if (!InteractRay.transform.GetComponentInParent<Script_Door_W>().m_bOpen)
-                    {
 
-                        Debug.Log("Open Door");
-                        InteractRay.transform.GetComponentInParent<Script_Door_W>().OpenDoor(InteractRay);
-                        /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
-                    }
+                    Debug.Log("Open Door");
+                    InteractRay.transform.GetComponentInParent<Script_Door_W>().OpenDoor(InteractRay);
+                    /*InteractRay.transform.GetComponentInParent<Animator>().SetBool("Open", true);*/
                 }
             }
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 3.0f, LayerMask.GetMask("Windows")))
             {
                 /*if (!InteractRay.transform.GetComponentInParent<Script_Window_W>().m_bOpen)
                 {
-
                     Debug.Log("Open Window");
                     InteractRay.transform.GetComponentInParent<Script_Window_W>().OpenWindow();
                 }*/
@@ -101,7 +97,7 @@ public class Script_Player_W : MonoBehaviour
                     }
                 }
             }
-            else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Tools")))
+            /*else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Tools")))
             {
                 GameObject foundTool = InteractRay.transform.parent.parent.gameObject; //find the object we are looking at
                 if (foundTool.GetComponent<Script_Tool>().ToolData.inPlayerPossession == false) //are we not holding it?
@@ -113,7 +109,7 @@ public class Script_Player_W : MonoBehaviour
 
                 }
 
-            }
+            }*/
             else if (Physics.Raycast(m_Camera.m_Camera.transform.position, m_Camera.m_Camera.transform.forward, out InteractRay, 2.0f, LayerMask.GetMask("Interactables")))
             {
                 if (InteractRay.transform.gameObject.tag is "DishWasher")

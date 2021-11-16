@@ -12,7 +12,7 @@ public class Script_ObjectiveManager_W : MonoBehaviour
 
     private GameObject[] m_CobwebObjectList;
     private GameObject[] m_WindowObjectList;
-    private GameObject[] m_DishObjectList;
+    [SerializeField] GameObject[] m_DishObjectList;
     private GameObject[] m_ClothesObjectList;
     public int m_WNumber;
     public int m_DWNumber;

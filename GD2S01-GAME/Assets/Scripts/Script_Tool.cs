@@ -277,14 +277,14 @@ public class Script_Tool : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
         {
-            if (hit.transform.GetComponentInParent<WindowClean_B>())
+            if (hit.transform.GetComponentInChildren<WindowClean_B>())
             {
-                if (!(hit.transform.GetComponentInParent<WindowClean_B>().m_isClean))
+                if (!(hit.transform.GetComponentInChildren<WindowClean_B>().m_isClean))
                 {
                     m_ObjectiveManager.m_DWNumber--;
                 }
 
-                if (hit.transform.GetComponentInParent<WindowClean_B>().CleanWindow())
+                if (hit.transform.GetComponentInChildren<WindowClean_B>().CleanWindow())
                 {
                     m_Wipe.Play();
                 }
@@ -302,7 +302,7 @@ public class Script_Tool : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hit, ToolData.fInteractRange, LayerMask.GetMask("Windows")))
         {
-            hit.transform.GetComponentInParent<WindowClean_B>().WetWindow();
+            hit.transform.GetComponentInChildren<WindowClean_B>().WetWindow();
         }
     }
     /*public void OnCollisionEnter(Collision collisionInfo)
