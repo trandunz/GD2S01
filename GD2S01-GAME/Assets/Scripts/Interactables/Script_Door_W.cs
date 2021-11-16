@@ -109,8 +109,12 @@ public class Script_Door_W : MonoBehaviour
         {
             if (m_IsSpooky)
             {
+                if (!m_Enemy.m_bMove)
+                {
+                    m_Enemy.m_bMove = true;
+                }
                 // ghosts
-                m_Enemy.m_bMove = true;
+
             }
             m_PrevCastNormZ = RayCast.normal.z;
             if (RayCast.normal.z > 0.0f)

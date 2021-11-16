@@ -29,6 +29,7 @@ TagManager:
   - LightManager
   - MusicPlayer
   - TaskCompletedUI
+  - spookyboy
   layers:
   - Default
   - TransparentFX
