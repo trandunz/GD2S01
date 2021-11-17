@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Script_BUIExitB_W : MonoBehaviour
 {
+    public void ForceMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu_W");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void QuitToMainMenu()
     {
         if (GetComponentInParent<Script_UIScripts>().m_bIsInGame)

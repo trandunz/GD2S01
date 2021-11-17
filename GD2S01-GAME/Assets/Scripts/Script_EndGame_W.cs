@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Script_EndGame_W : MonoBehaviour
 {
@@ -20,9 +21,14 @@ public class Script_EndGame_W : MonoBehaviour
     bool isDancing = false;
     IEnumerator EndGameCoroutine()
     {
+        isDancing = true;
         yield return new WaitForSeconds(waitTime);
         m_Wall.GetComponent<Animator>().SetTrigger("OpenDoor");
-        GetComponent<AudioSource>().PlayOneShot(Thriller);
+        if (!GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+
         m_AbeTest = GameObject.FindGameObjectsWithTag("AbeTest");
         m_Lights = GameObject.FindGameObjectsWithTag("AbeLights");
         m_LightBulbs = GameObject.FindGameObjectsWithTag("AbeBulbs");
@@ -36,7 +42,7 @@ public class Script_EndGame_W : MonoBehaviour
             gameObject.GetComponent<Light>().intensity = 5.0f;
         }
 
-        isDancing = true;
+       
     }
 
     private void Update()
@@ -59,13 +65,10 @@ public class Script_EndGame_W : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !doOnce)
+        if (other.gameObject.tag is "Player" && !isDancing)
         {
             StartCoroutine(EndGameCoroutine());
             doOnce = true;
-            /*GameObject.FindGameObjectWithTag("Player").GetComponent<Script_CharacterMotor_W>().m_bCanMove = false;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Script_CameraRefrence_W>().m_Camera.GetComponent<Script_MouseLook_W>().m_bIsFree = false;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Script_CameraRefrence_W>().m_Camera.GetComponent<Animator>().SetTrigger("EndGame");*/
         }
        
     }
