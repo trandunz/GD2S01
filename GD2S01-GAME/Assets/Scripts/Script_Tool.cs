@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_Tool.cs
+Description : contains all the info needed for a cleaning tool and what they should do when interacted with
+Author : William Inman. Richard Walters. Benjamin Bartlett
+Mail : william.inman@mds.ac.nz, richard.walters@mds.ac.nz, benjamin.bartlett@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

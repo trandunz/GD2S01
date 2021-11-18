@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_CobwebCleaning_R.cs
+Description : Mostly unused script (was moved elsewhere)
+Author : Richard Walters
+Mail : richard.walters@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

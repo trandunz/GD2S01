@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_UIScripts.cs
+Description : Controls the UI the player sees when they open up the journal
+Author : William Inman
+Mail : william.inman@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

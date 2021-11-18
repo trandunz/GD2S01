@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : ScriptableObject_Tool_W.cs
+Description : contains info needed for tools
+Author : William Inman
+Mail : william.inman@mds.ac.nz
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_Dishwasher.cs
+Description : adds to score when player intects with it with dishes in their inventory
+Author : William Inman
+Mail : william.inman@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

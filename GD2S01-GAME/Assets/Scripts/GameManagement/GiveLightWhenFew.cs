@@ -1,4 +1,19 @@
-﻿using System.Collections;
+﻿
+/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : GiveLightWhenFew.cs
+Description : Highlights objects with the same tag if there are few in the scene
+Author : Richard Walters
+Mail : richard.walters@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

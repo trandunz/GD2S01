@@ -1,4 +1,18 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_ObjectiveManager_W.cs
+Description : controls the score and objectives for all the cleaning tasks
+Author : William Inman. Richard Walters. Benjamin Bartlett
+Mail : william.inman@mds.ac.nz, richard.walters@mds.ac.nz, benjamin.bartlett@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
