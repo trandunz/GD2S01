@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : WindowClean_B.cs
+Description : cleans windows with functions
+Author : Benjamin Bartlett
+Mail : benjamin.bartlett@mds.ac.nz
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

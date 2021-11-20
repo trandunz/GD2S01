@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_Enemy_W.cs
+Description : has an enum for various states of the enemies
+Author : William Inman
+Mail : william.inman@mds.ac.nz
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

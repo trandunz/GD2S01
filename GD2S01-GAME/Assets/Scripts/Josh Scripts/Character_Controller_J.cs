@@ -1,5 +1,16 @@
-﻿// edited version of Wills without animations
-
+﻿//
+// Bachelor of Software Engineering
+// Media Design School
+// Auckland
+// New Zealand
+//
+// (c) Media Design School
+//
+// File Name : Room_Swap_J.cs
+// Description : edited version of Wills character controller without animations
+// Author : Joshua Bell + Wiliam Inman
+// Mail : joshua.bell@mds.ac.nz
+//
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

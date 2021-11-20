@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_TriggerSpooky_B.cs
+Description : causes spooky to happen
+Author : Benjamin Bartlett
+Mail : benjamin.bartlett@mds.ac.nz
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,19 @@
-﻿using System.Collections;
+﻿
+/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_DestroyParticleWhenFinished_R.cs
+Description : Destroys particles when they are finished (as long as they dont loop)
+Author : Richard Walters
+Mail : richard.walters@mds.ac.nz
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

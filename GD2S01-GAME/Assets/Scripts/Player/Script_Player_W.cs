@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) Media Design School
+
+File Name : Script_Player_W.cs
+Description : controls all interaction with player and world and objects. Opens doors, closes windows, cleans stuff, swaps tools and more
+Author : William Inman. Richard Walters. Benjamin Bartlett
+Mail : william.inman@mds.ac.nz, richard.walters@mds.ac.nz, benjamin.bartlett@mds.ac.nz
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
